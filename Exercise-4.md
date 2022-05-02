@@ -3437,8 +3437,8 @@ together.
 
 <img src="C:/Users/hp/Documents/Data-Mining-PS4/screenshot1.png" width="1024" /><img src="C:/Users/hp/Documents/Data-Mining-PS4/screenshot2.png" width="371" />
 
-![Gephi graph to the association rules for confidence and support over
-0.01](C:/Users/hp/Documents/Data-Mining-PS4/Exercise-4_files/figure-markdown_github/screenshot1.png)
+![Gephi plot to the association rules for confidence and supoort over
+0.01](Exercise-4_files/figure-markdown_github/screenshot1.png)
 
-![Composition of clusters in Gephi
-plot](C:/Users/hp/Documents/Data-Mining-PS4/Exercise-4_files/figure-markdown_github/screenshot2.png)
+![Cluster composition in the Gephi
+plot](Exercise-4_files/figure-markdown_github/screenshot2.png)

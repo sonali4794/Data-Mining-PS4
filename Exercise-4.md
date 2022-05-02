@@ -3446,5 +3446,7 @@ Vegetables and its acquaintances, cream and its acquaintances etc are
 forming up ina cluster. I have hidden the lables for association rules
 in order to declutter the web.
 
+![](Exercise-4_files/figure-markdown_github/screenshot3.png) Here is
+another image with a little zoomed in and indicating the degree of nodes
 ![Cluster composition in the Gephi
 plot](Exercise-4_files/figure-markdown_github/screenshot2.png)

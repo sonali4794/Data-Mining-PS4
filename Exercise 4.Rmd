@@ -4,7 +4,7 @@ author: "Sonali Mishra"
 date: "05/01/2022"
 output:
   md_document:
-    variant: markdown_github
+    variant: gfm
 always_allow_html: true
 ---
 

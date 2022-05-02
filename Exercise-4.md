@@ -16,20 +16,20 @@ Lets look at Kmeans and Kmeans++ clustering.
 KMEANS Analyse if any clustering occurs with 2 clusters based on wine
 color
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](Exercise-4_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 Analyse if any clustering occurs with 10 clusters based on wine quality
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](Exercise-4_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 KMEANS++ Analyse if any clustering occurs with 2 clusters based on wine
 color
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](Exercise-4_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 Analyse if any clustering occurs with 10 clusters based on wine quality
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-5-1.png) Both
+![](Exercise-4_files/figure-gfm/unnamed-chunk-5-1.png)<!-- --> Both
 kmeans and kmeans++ provide good results for clustering for wine color
 but neither does that well for quality based clustering. If we have to
 pick one of these two models we will use within and bewtween clusters to
@@ -76,10 +76,10 @@ between cluster error for wine
 within cluster error for quality
 </td>
 <td style="text-align:right;">
-30661.38
+30549.36
 </td>
 <td style="text-align:right;">
-30491.97
+30549.42
 </td>
 </tr>
 <tr>
@@ -87,10 +87,10 @@ within cluster error for quality
 between cluster error for quality
 </td>
 <td style="text-align:right;">
-40794.62
+40906.64
 </td>
 <td style="text-align:right;">
-40964.03
+40906.58
 </td>
 </tr>
 </tbody>
@@ -103,7 +103,7 @@ and seperated clsuters.
 Now we try using PCA analysis First we use 2 components and see if any
 indicative clustering occurs for both color and quality
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-7-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-7-2.png)
+![](Exercise-4_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-7-2.png)<!-- -->
 <table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -254,7 +254,7 @@ increase summaries to improve clustering based on quality. This is also
 evident from the fact that 2 components explain only 50% of the
 variation in the data.
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-8-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-8-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-8-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-8-4.png)
+![](Exercise-4_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-8-3.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-8-4.png)<!-- -->
 <table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -486,21 +486,21 @@ correlation between these segments (my guess is that we will) then it
 may make sense to perform PCA and reduce the segments from 36 to
 whatever seems suitable.
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-1.png) I do
+![](Exercise-4_files/figure-gfm/unnamed-chunk-9-1.png)<!-- --> I do
 require a optimal number of clusters and I think computing from the
 elbow plot might be a good starting point for the same.
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-10-1.png)
+![](Exercise-4_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 From this plot I would start with 15 clusters.
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-11-1.png) This
-is just to get a pictorial view of 15 clustering of the data. I have
-taken two highly correlated market segments.
+![](Exercise-4_files/figure-gfm/unnamed-chunk-11-1.png)<!-- --> This is
+just to get a pictorial view of 15 clustering of the data. I have taken
+two highly correlated market segments.
 
 Next we do PCA on this
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-4.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-5.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-6.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-7.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-8.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-9.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-10.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-11.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-12.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-13.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-14.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-15.png)
+![](Exercise-4_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-2.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-3.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-4.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-5.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-6.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-7.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-8.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-9.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-10.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-11.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-12.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-13.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-14.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-15.png)<!-- -->
 <table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -2398,7 +2398,7 @@ while losing roghly 25% of the data.
 Here we look at multiple ways in which shopping baskets of consumers can
 be connected and analyse through lift parameter.
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-1.png)
+![](Exercise-4_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 This gives a view of most popular items in shopping baskets for grocery
 shopping
@@ -2421,11 +2421,11 @@ shopping
     ## set transactions ...[170 item(s), 9835 transaction(s)] done [0.00s].
     ## sorting and recoding items ... [157 item(s)] done [0.00s].
     ## creating transaction tree ... done [0.00s].
-    ## checking subsets of size 1 2 3 4 done [0.01s].
+    ## checking subsets of size 1 2 3 4 done [0.00s].
     ## writing ... [30843 rule(s)] done [0.00s].
-    ## creating S4 object  ... done [0.01s].
+    ## creating S4 object  ... done [0.02s].
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-14-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-14-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-14-3.png)
+![](Exercise-4_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-14-2.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-14-3.png)<!-- -->
 
 As expected higher confidence leads to lower lift. There is a clear
 inverse relation between the two. We have chosen support threshold of
@@ -2925,4 +2925,4 @@ count
 
 This is a quite insightful table
 
-<img src="C:/Users/hp/Documents/Data-Mining-PS4/screenshot1.png" width="1024" /><img src="C:/Users/hp/Documents/Data-Mining-PS4/screenshot2.png" width="371" />
+![](C:/Users/hp/Documents/Data-Mining-PS4/screenshot1.png)<!-- -->![](C:/Users/hp/Documents/Data-Mining-PS4/screenshot2.png)<!-- -->

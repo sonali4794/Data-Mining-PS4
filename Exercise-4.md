@@ -2373,6 +2373,25 @@ adult
 
 15 principal components explain nearly 73% of the variation in data.
 
+Lets look a little deeper into some of the graphs. PC1 seems to be like
+an total count of all features as it weighs everything on one side.
+There is no contrasting here. Most of NutritionH20 followers are heavy
+participants in religion, food, parenting, sports and school. PC2 seems
+to contrast between serious segments like religion, news, family versus
+casual segments like fitness, dating, shopping (entertainment related).
+PC4 seems to contrast betwwen food and health versus everything else.
+This is quite interesting partition. It is interesting to note that
+adult and spam categories are mostly in middle of the spectrum, they are
+rarely in extreme of the dataset. That maybe explained by the fact that
+these were mostly filtered out and what remained may not have been
+significant for PCA to study much about it. Since most of the components
+individually explain very little of the data their partitioning
+resembles each other quite a bit. For example PC9 contrasts
+entertainment segments similar to PC2.
+
+If we were to run supervised learning models, we would benefit from
+using these 15 components instead of all 36 (reduced by more than half)
+while losing roghly 25% of the data.
 ![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-1.png)
 
     ## Apriori

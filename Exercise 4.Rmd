@@ -306,19 +306,33 @@ loadings_summary = pc1$rotation %>%
   rownames_to_column('market_segments')
 
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC1),y=PC1))+xlab("PC1")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC2),y=PC2))+xlab("PC2")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC3),y=PC3))+xlab("PC3")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC4),y=PC4))+xlab("PC4")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC5),y=PC5))+xlab("PC5")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC6),y=PC6))+xlab("PC6")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC7),y=PC7))+xlab("PC7")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC8),y=PC8))+xlab("PC8")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC9),y=PC9))+xlab("PC9")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC10),y=PC10))+xlab("PC10")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC11),y=PC11))+xlab("PC11")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC12),y=PC12))+xlab("PC12")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC13),y=PC13))+xlab("PC13")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC14),y=PC14))+xlab("PC14")+ylab("Market Segments")+coord_flip()
+
 ggplot(loadings_summary) +geom_col(aes(x=reorder(market_segments, PC15),y=PC15))+xlab("PC15")+ylab("Market Segments")+coord_flip()
 
 df1 = pc1$rotation
@@ -334,6 +348,11 @@ summary(pc1)
 
 15 principal components explain nearly 73% of the variation in data. 
 
+Lets look a little deeper into some of the graphs. 
+PC1 seems to be like an total count of all features as it weighs everything on one side. There is no contrasting here. Most of NutritionH20 followers are heavy participants in religion, food, parenting, sports and school. PC2 seems to contrast between serious segments like religion, news, family versus casual segments like fitness, dating, shopping (entertainment related). PC4 seems to contrast betwwen food and health versus everything else. This is quite interesting partition. It is interesting to note that adult and spam categories are mostly in middle of the spectrum, they are rarely in extreme of the dataset. That maybe explained by the fact that these were mostly filtered out and what remained may not have been significant for PCA to study much about it. 
+Since most of the components individually explain very little of the data their partitioning resembles each other quite a bit. For example PC9 contrasts entertainment segments similar to PC2. 
+
+If we were to run supervised learning models, we would benefit from using these 15 components instead of all 36 (reduced by more than half) while losing roghly 25% of the data. 
 ```{r}
 
 grocery_txt = read.delim(here("Data-Mining-PS4/Association rules for grocery purchases/groceries.txt"))

@@ -1,8 +1,8 @@
+#read and remove NAs and scale and center and convert to frequencies from count data 
 social_marketing = read_csv(here("Data-Mining-PS4/Market Segmentation/social_marketing.csv"))
 social_marketing = na.omit(social_marketing)
 X = social_marketing[, -(1)]
 X = X/rowSums(X)
-view(X)
 X = scale(X, center=TRUE, scale=TRUE)
 
 corr = round(cor(X),1)
@@ -16,23 +16,13 @@ SSE_grid = foreach(k = k_grid, .combine = 'c') %do% {
 
 plot(k_grid, SSE_grid, main = "Elbow Plot")
 
-X_dist = dist(X)
-h1 = hclust(X_dist, method='average')
-c1 = cutree(h1, 10)
-D1 = data.frame(social_marketing, z1 = c1)
-ggplot(D1) + geom_point(aes(x=shopping, y=beauty, col=factor(z1)))
-
 kmeanspp_cluster = kmeanspp(X, 10, nstart=35)
-
-
 
 ggplot(social_marketing) + 
   geom_point(aes(shopping, beauty, color=factor(kmeanspp_cluster$cluster)))+
   xlab("Color of the wine in original data") +
   ylab("Density") +
   labs(color = "Kmeans++ clustering")
-
-
 
 pc1 = prcomp(X, scale=TRUE, rank=5)
 loadings_summary = pc1$rotation %>%

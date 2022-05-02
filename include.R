@@ -47,7 +47,10 @@ librarian::shelf(
   arules,
   arulesViz,
   igraph,
-  RColorBrewer
+  RColorBrewer,
+  parallel,
+  iterators,
+  doParallel
 )
 
 # tell here where we are so we can use it elsewhere

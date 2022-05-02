@@ -479,7 +479,781 @@ had to use supervised learning models on PCA i would pick the model with
 
 ##Market Segmentation
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-1.png)
+This is a common use case in machine learning and analysing this data
+will give interesting insights into the market segments preffered by
+followers of the brand to NutritionH20. If we notice some significant
+correlation between these segments (my guess is that we will) then it
+may make sense to perform PCA and reduce the segments from 36 to
+whatever seems suitable.
+
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-1.png) I do
+require a optimal number of clusters and I think computing from the
+elbow plot might be a good starting point for the same.
+
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-10-1.png)
+
+From this plot I would start with 10 clusters.
+
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-11-1.png) This
+is just to get a pictorial view of 10 clustering of the data. I have
+taken two highly correlated market segments.
+
+Next we do PCA on this
+
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-4.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-5.png)
+<table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+PC1
+</th>
+<th style="text-align:right;">
+PC2
+</th>
+<th style="text-align:right;">
+PC3
+</th>
+<th style="text-align:right;">
+PC4
+</th>
+<th style="text-align:right;">
+PC5
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+chatter
+</td>
+<td style="text-align:right;">
+-0.1975899
+</td>
+<td style="text-align:right;">
+0.2480803
+</td>
+<td style="text-align:right;">
+-0.1472928
+</td>
+<td style="text-align:right;">
+0.1967668
+</td>
+<td style="text-align:right;">
+-0.3216062
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+current_events
+</td>
+<td style="text-align:right;">
+-0.0608918
+</td>
+<td style="text-align:right;">
+0.1406842
+</td>
+<td style="text-align:right;">
+-0.0157873
+</td>
+<td style="text-align:right;">
+0.0506477
+</td>
+<td style="text-align:right;">
+-0.1244933
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+travel
+</td>
+<td style="text-align:right;">
+-0.0132345
+</td>
+<td style="text-align:right;">
+0.1822554
+</td>
+<td style="text-align:right;">
+0.2668629
+</td>
+<td style="text-align:right;">
+0.0704735
+</td>
+<td style="text-align:right;">
+0.2011001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+photo_sharing
+</td>
+<td style="text-align:right;">
+-0.2352407
+</td>
+<td style="text-align:right;">
+0.1326765
+</td>
+<td style="text-align:right;">
+-0.2626028
+</td>
+<td style="text-align:right;">
+0.2048957
+</td>
+<td style="text-align:right;">
+-0.1241619
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+uncategorized
+</td>
+<td style="text-align:right;">
+-0.0772338
+</td>
+<td style="text-align:right;">
+0.0429770
+</td>
+<td style="text-align:right;">
+-0.0273236
+</td>
+<td style="text-align:right;">
+-0.0282670
+</td>
+<td style="text-align:right;">
+-0.0194838
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tv_film
+</td>
+<td style="text-align:right;">
+-0.0334057
+</td>
+<td style="text-align:right;">
+0.1226475
+</td>
+<td style="text-align:right;">
+0.0234617
+</td>
+<td style="text-align:right;">
+-0.1985453
+</td>
+<td style="text-align:right;">
+0.0007153
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sports_fandom
+</td>
+<td style="text-align:right;">
+0.4080358
+</td>
+<td style="text-align:right;">
+0.0410039
+</td>
+<td style="text-align:right;">
+-0.0786319
+</td>
+<td style="text-align:right;">
+0.0300435
+</td>
+<td style="text-align:right;">
+-0.0138759
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+politics
+</td>
+<td style="text-align:right;">
+0.0395618
+</td>
+<td style="text-align:right;">
+0.2122630
+</td>
+<td style="text-align:right;">
+0.3882656
+</td>
+<td style="text-align:right;">
+0.1667712
+</td>
+<td style="text-align:right;">
+0.2595698
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+food
+</td>
+<td style="text-align:right;">
+0.3455919
+</td>
+<td style="text-align:right;">
+-0.1151529
+</td>
+<td style="text-align:right;">
+-0.0478261
+</td>
+<td style="text-align:right;">
+-0.0482440
+</td>
+<td style="text-align:right;">
+-0.0910880
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+family
+</td>
+<td style="text-align:right;">
+0.2370016
+</td>
+<td style="text-align:right;">
+0.0491769
+</td>
+<td style="text-align:right;">
+-0.1009776
+</td>
+<td style="text-align:right;">
+0.0057173
+</td>
+<td style="text-align:right;">
+-0.0680072
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+home_and_garden
+</td>
+<td style="text-align:right;">
+-0.0220907
+</td>
+<td style="text-align:right;">
+0.0449082
+</td>
+<td style="text-align:right;">
+-0.0018547
+</td>
+<td style="text-align:right;">
+0.0117647
+</td>
+<td style="text-align:right;">
+-0.0456691
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+music
+</td>
+<td style="text-align:right;">
+-0.0539143
+</td>
+<td style="text-align:right;">
+0.0386283
+</td>
+<td style="text-align:right;">
+-0.0809505
+</td>
+<td style="text-align:right;">
+-0.0685288
+</td>
+<td style="text-align:right;">
+0.0250874
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+news
+</td>
+<td style="text-align:right;">
+0.0982609
+</td>
+<td style="text-align:right;">
+0.1268346
+</td>
+<td style="text-align:right;">
+0.3373947
+</td>
+<td style="text-align:right;">
+0.1327367
+</td>
+<td style="text-align:right;">
+0.2280609
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+online_gaming
+</td>
+<td style="text-align:right;">
+-0.0705210
+</td>
+<td style="text-align:right;">
+0.0556572
+</td>
+<td style="text-align:right;">
+0.0160237
+</td>
+<td style="text-align:right;">
+-0.5194713
+</td>
+<td style="text-align:right;">
+0.0255499
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shopping
+</td>
+<td style="text-align:right;">
+-0.1787867
+</td>
+<td style="text-align:right;">
+0.1690414
+</td>
+<td style="text-align:right;">
+-0.1576784
+</td>
+<td style="text-align:right;">
+0.1982797
+</td>
+<td style="text-align:right;">
+-0.2752010
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+health_nutrition
+</td>
+<td style="text-align:right;">
+-0.0668314
+</td>
+<td style="text-align:right;">
+-0.4734191
+</td>
+<td style="text-align:right;">
+0.2183781
+</td>
+<td style="text-align:right;">
+0.0221055
+</td>
+<td style="text-align:right;">
+-0.1979115
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+college_uni
+</td>
+<td style="text-align:right;">
+-0.0872661
+</td>
+<td style="text-align:right;">
+0.1018343
+</td>
+<td style="text-align:right;">
+-0.0031125
+</td>
+<td style="text-align:right;">
+-0.5549200
+</td>
+<td style="text-align:right;">
+0.0307502
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sports_playing
+</td>
+<td style="text-align:right;">
+-0.0562136
+</td>
+<td style="text-align:right;">
+0.0488126
+</td>
+<td style="text-align:right;">
+-0.0277698
+</td>
+<td style="text-align:right;">
+-0.3429553
+</td>
+<td style="text-align:right;">
+0.0260842
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+cooking
+</td>
+<td style="text-align:right;">
+-0.1668881
+</td>
+<td style="text-align:right;">
+-0.3008648
+</td>
+<td style="text-align:right;">
+-0.2204246
+</td>
+<td style="text-align:right;">
+0.0873051
+</td>
+<td style="text-align:right;">
+0.3726213
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+eco
+</td>
+<td style="text-align:right;">
+-0.0308353
+</td>
+<td style="text-align:right;">
+-0.0242025
+</td>
+<td style="text-align:right;">
+0.0010274
+</td>
+<td style="text-align:right;">
+0.0586068
+</td>
+<td style="text-align:right;">
+-0.1481715
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+computers
+</td>
+<td style="text-align:right;">
+0.0160870
+</td>
+<td style="text-align:right;">
+0.1247312
+</td>
+<td style="text-align:right;">
+0.1910162
+</td>
+<td style="text-align:right;">
+0.1153943
+</td>
+<td style="text-align:right;">
+0.1705343
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+business
+</td>
+<td style="text-align:right;">
+-0.0417828
+</td>
+<td style="text-align:right;">
+0.0783457
+</td>
+<td style="text-align:right;">
+-0.0249920
+</td>
+<td style="text-align:right;">
+0.0449317
+</td>
+<td style="text-align:right;">
+-0.0199879
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+outdoors
+</td>
+<td style="text-align:right;">
+-0.0168307
+</td>
+<td style="text-align:right;">
+-0.3381732
+</td>
+<td style="text-align:right;">
+0.2260617
+</td>
+<td style="text-align:right;">
+0.0296874
+</td>
+<td style="text-align:right;">
+-0.0913113
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+crafts
+</td>
+<td style="text-align:right;">
+0.0717104
+</td>
+<td style="text-align:right;">
+0.0304891
+</td>
+<td style="text-align:right;">
+-0.0510418
+</td>
+<td style="text-align:right;">
+-0.0083744
+</td>
+<td style="text-align:right;">
+-0.0647362
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+automotive
+</td>
+<td style="text-align:right;">
+0.0808430
+</td>
+<td style="text-align:right;">
+0.1441375
+</td>
+<td style="text-align:right;">
+0.1675895
+</td>
+<td style="text-align:right;">
+0.1203127
+</td>
+<td style="text-align:right;">
+0.0955183
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+art
+</td>
+<td style="text-align:right;">
+-0.0090801
+</td>
+<td style="text-align:right;">
+0.0425026
+</td>
+<td style="text-align:right;">
+0.0043658
+</td>
+<td style="text-align:right;">
+-0.1486188
+</td>
+<td style="text-align:right;">
+0.0273318
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+religion
+</td>
+<td style="text-align:right;">
+0.4233344
+</td>
+<td style="text-align:right;">
+-0.0216919
+</td>
+<td style="text-align:right;">
+-0.1641208
+</td>
+<td style="text-align:right;">
+-0.0164119
+</td>
+<td style="text-align:right;">
+-0.0223728
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+beauty
+</td>
+<td style="text-align:right;">
+-0.0569933
+</td>
+<td style="text-align:right;">
+-0.1374712
+</td>
+<td style="text-align:right;">
+-0.2964247
+</td>
+<td style="text-align:right;">
+0.0788073
+</td>
+<td style="text-align:right;">
+0.3817464
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+parenting
+</td>
+<td style="text-align:right;">
+0.4025340
+</td>
+<td style="text-align:right;">
+-0.0207748
+</td>
+<td style="text-align:right;">
+-0.1384310
+</td>
+<td style="text-align:right;">
+0.0269295
+</td>
+<td style="text-align:right;">
+-0.0294648
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dating
+</td>
+<td style="text-align:right;">
+-0.0191894
+</td>
+<td style="text-align:right;">
+-0.0283745
+</td>
+<td style="text-align:right;">
+-0.0191197
+</td>
+<td style="text-align:right;">
+0.0111650
+</td>
+<td style="text-align:right;">
+0.0468116
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+school
+</td>
+<td style="text-align:right;">
+0.2730599
+</td>
+<td style="text-align:right;">
+-0.0004227
+</td>
+<td style="text-align:right;">
+-0.1904019
+</td>
+<td style="text-align:right;">
+0.0475401
+</td>
+<td style="text-align:right;">
+0.0016010
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+personal_fitness
+</td>
+<td style="text-align:right;">
+-0.0636587
+</td>
+<td style="text-align:right;">
+-0.4453884
+</td>
+<td style="text-align:right;">
+0.2068289
+</td>
+<td style="text-align:right;">
+0.0273340
+</td>
+<td style="text-align:right;">
+-0.2145982
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fashion
+</td>
+<td style="text-align:right;">
+-0.1353484
+</td>
+<td style="text-align:right;">
+-0.1552167
+</td>
+<td style="text-align:right;">
+-0.3006239
+</td>
+<td style="text-align:right;">
+0.0772475
+</td>
+<td style="text-align:right;">
+0.4048249
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+small_business
+</td>
+<td style="text-align:right;">
+-0.0301604
+</td>
+<td style="text-align:right;">
+0.0813814
+</td>
+<td style="text-align:right;">
+-0.0233629
+</td>
+<td style="text-align:right;">
+-0.0486852
+</td>
+<td style="text-align:right;">
+0.0023644
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+spam
+</td>
+<td style="text-align:right;">
+0.0029063
+</td>
+<td style="text-align:right;">
+-0.0017889
+</td>
+<td style="text-align:right;">
+0.0230007
+</td>
+<td style="text-align:right;">
+-0.0121189
+</td>
+<td style="text-align:right;">
+-0.0150374
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+adult
+</td>
+<td style="text-align:right;">
+0.0141523
+</td>
+<td style="text-align:right;">
+-0.0047953
+</td>
+<td style="text-align:right;">
+0.0292899
+</td>
+<td style="text-align:right;">
+-0.0092229
+</td>
+<td style="text-align:right;">
+-0.0170209
+</td>
+</tr>
+</tbody>
+</table>
+
+    ## Importance of first k=5 (out of 36) components:
+    ##                            PC1     PC2     PC3     PC4     PC5
+    ## Standard deviation     1.69908 1.61882 1.54302 1.46058 1.40975
+    ## Proportion of Variance 0.08019 0.07279 0.06614 0.05926 0.05521
+    ## Cumulative Proportion  0.08019 0.15299 0.21912 0.27838 0.33358
+
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-1.png)
 
     ## Apriori
     ## 
@@ -499,9 +1273,9 @@ had to use supervised learning models on PCA i would pick the model with
     ## set transactions ...[170 item(s), 9835 transaction(s)] done [0.00s].
     ## sorting and recoding items ... [157 item(s)] done [0.00s].
     ## creating transaction tree ... done [0.00s].
-    ## checking subsets of size 1 2 3 4 done [0.01s].
-    ## writing ... [30843 rule(s)] done [0.00s].
-    ## creating S4 object  ... done [0.01s].
+    ## checking subsets of size 1 2 3 4 done [0.02s].
+    ## writing ... [30843 rule(s)] done [0.01s].
+    ## creating S4 object  ... done [0.02s].
 
     ##      lhs                    rhs                support     confidence
     ## [1]  {honey}             => {whole milk}       0.001118454 0.7333333 
@@ -606,4 +1380,4 @@ had to use supervised learning models on PCA i would pick the model with
     ## [49] 0.003863752 1.5737831 11   
     ## [50] 0.003863752 2.0400614 15
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-4.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-5.png)![](C:/Users/hp/Documents/Data-Mining-PS4/groceryrules1.graphml.gephi)
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-4.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-5.png)![](C:/Users/hp/Documents/Data-Mining-PS4/groceryrules1.graphml.gephi)

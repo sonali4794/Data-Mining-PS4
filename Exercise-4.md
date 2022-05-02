@@ -492,7 +492,7 @@ elbow plot might be a good starting point for the same.
 
 ![](Exercise-4_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
-From this plot I would start with 10 clusters.
+From this plot I would start with 15 clusters.
 
 ![](Exercise-4_files/figure-markdown_github/unnamed-chunk-11-1.png) This
 is just to get a pictorial view of 10 clustering of the data. I have
@@ -500,7 +500,7 @@ taken two highly correlated market segments.
 
 Next we do PCA on this
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-4.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-5.png)
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-1.png)
 <table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -521,6 +521,36 @@ PC4
 <th style="text-align:right;">
 PC5
 </th>
+<th style="text-align:right;">
+PC6
+</th>
+<th style="text-align:right;">
+PC7
+</th>
+<th style="text-align:right;">
+PC8
+</th>
+<th style="text-align:right;">
+PC9
+</th>
+<th style="text-align:right;">
+PC10
+</th>
+<th style="text-align:right;">
+PC11
+</th>
+<th style="text-align:right;">
+PC12
+</th>
+<th style="text-align:right;">
+PC13
+</th>
+<th style="text-align:right;">
+PC14
+</th>
+<th style="text-align:right;">
+PC15
+</th>
 </tr>
 </thead>
 <tbody>
@@ -529,19 +559,49 @@ PC5
 chatter
 </td>
 <td style="text-align:right;">
--0.1975899
+-0.1259924
 </td>
 <td style="text-align:right;">
-0.2480803
+0.1972255
 </td>
 <td style="text-align:right;">
--0.1472928
+-0.0748069
 </td>
 <td style="text-align:right;">
-0.1967668
+0.1128314
 </td>
 <td style="text-align:right;">
--0.3216062
+-0.1927820
+</td>
+<td style="text-align:right;">
+0.4610495
+</td>
+<td style="text-align:right;">
+-0.1077307
+</td>
+<td style="text-align:right;">
+0.0708599
+</td>
+<td style="text-align:right;">
+-0.0163368
+</td>
+<td style="text-align:right;">
+0.1070721
+</td>
+<td style="text-align:right;">
+-0.0047018
+</td>
+<td style="text-align:right;">
+-0.0767817
+</td>
+<td style="text-align:right;">
+-0.0059865
+</td>
+<td style="text-align:right;">
+0.0761074
+</td>
+<td style="text-align:right;">
+0.0126302
 </td>
 </tr>
 <tr>
@@ -549,19 +609,49 @@ chatter
 current_events
 </td>
 <td style="text-align:right;">
--0.0608918
+-0.0972367
 </td>
 <td style="text-align:right;">
-0.1406842
+0.0640365
 </td>
 <td style="text-align:right;">
--0.0157873
+-0.0522397
 </td>
 <td style="text-align:right;">
-0.0506477
+0.0298486
 </td>
 <td style="text-align:right;">
--0.1244933
+-0.0581898
+</td>
+<td style="text-align:right;">
+0.1394341
+</td>
+<td style="text-align:right;">
+0.0373045
+</td>
+<td style="text-align:right;">
+-0.0546423
+</td>
+<td style="text-align:right;">
+-0.0197992
+</td>
+<td style="text-align:right;">
+-0.1121153
+</td>
+<td style="text-align:right;">
+0.0263884
+</td>
+<td style="text-align:right;">
+0.6576252
+</td>
+<td style="text-align:right;">
+0.6803548
+</td>
+<td style="text-align:right;">
+-0.1043512
+</td>
+<td style="text-align:right;">
+0.0871621
 </td>
 </tr>
 <tr>
@@ -569,19 +659,49 @@ current_events
 travel
 </td>
 <td style="text-align:right;">
--0.0132345
+-0.1166490
 </td>
 <td style="text-align:right;">
-0.1822554
+0.0399473
 </td>
 <td style="text-align:right;">
-0.2668629
+-0.4242597
 </td>
 <td style="text-align:right;">
-0.0704735
+-0.1454284
 </td>
 <td style="text-align:right;">
-0.2011001
+-0.0078372
+</td>
+<td style="text-align:right;">
+-0.1635710
+</td>
+<td style="text-align:right;">
+0.0850390
+</td>
+<td style="text-align:right;">
+0.3069055
+</td>
+<td style="text-align:right;">
+0.0192550
+</td>
+<td style="text-align:right;">
+-0.1059522
+</td>
+<td style="text-align:right;">
+-0.0132540
+</td>
+<td style="text-align:right;">
+0.0237868
+</td>
+<td style="text-align:right;">
+-0.0200000
+</td>
+<td style="text-align:right;">
+0.0846484
+</td>
+<td style="text-align:right;">
+0.0273192
 </td>
 </tr>
 <tr>
@@ -589,19 +709,49 @@ travel
 photo_sharing
 </td>
 <td style="text-align:right;">
--0.2352407
+-0.1802795
 </td>
 <td style="text-align:right;">
-0.1326765
+0.3030776
 </td>
 <td style="text-align:right;">
--0.2626028
+0.0107095
 </td>
 <td style="text-align:right;">
-0.2048957
+0.1514910
 </td>
 <td style="text-align:right;">
--0.1241619
+-0.2296606
+</td>
+<td style="text-align:right;">
+0.2113671
+</td>
+<td style="text-align:right;">
+-0.1265067
+</td>
+<td style="text-align:right;">
+0.0222006
+</td>
+<td style="text-align:right;">
+0.0163140
+</td>
+<td style="text-align:right;">
+-0.1313037
+</td>
+<td style="text-align:right;">
+-0.0800578
+</td>
+<td style="text-align:right;">
+-0.0560727
+</td>
+<td style="text-align:right;">
+-0.0797077
+</td>
+<td style="text-align:right;">
+0.0739437
+</td>
+<td style="text-align:right;">
+-0.0195978
 </td>
 </tr>
 <tr>
@@ -609,19 +759,49 @@ photo_sharing
 uncategorized
 </td>
 <td style="text-align:right;">
--0.0772338
+-0.0944351
 </td>
 <td style="text-align:right;">
-0.0429770
+0.1464989
 </td>
 <td style="text-align:right;">
--0.0273236
+0.0305419
 </td>
 <td style="text-align:right;">
--0.0282670
+0.0192457
 </td>
 <td style="text-align:right;">
--0.0194838
+0.0610212
+</td>
+<td style="text-align:right;">
+-0.0356092
+</td>
+<td style="text-align:right;">
+0.1873783
+</td>
+<td style="text-align:right;">
+-0.0490875
+</td>
+<td style="text-align:right;">
+-0.0536131
+</td>
+<td style="text-align:right;">
+0.2669750
+</td>
+<td style="text-align:right;">
+0.3587685
+</td>
+<td style="text-align:right;">
+-0.1854511
+</td>
+<td style="text-align:right;">
+0.0908244
+</td>
+<td style="text-align:right;">
+0.4665953
+</td>
+<td style="text-align:right;">
+0.2114008
 </td>
 </tr>
 <tr>
@@ -629,19 +809,49 @@ uncategorized
 tv_film
 </td>
 <td style="text-align:right;">
--0.0334057
+-0.0974567
 </td>
 <td style="text-align:right;">
-0.1226475
+0.0793525
 </td>
 <td style="text-align:right;">
-0.0234617
+-0.0862096
 </td>
 <td style="text-align:right;">
--0.1985453
+0.0899307
 </td>
 <td style="text-align:right;">
-0.0007153
+0.2102380
+</td>
+<td style="text-align:right;">
+0.0617921
+</td>
+<td style="text-align:right;">
+0.5047637
+</td>
+<td style="text-align:right;">
+-0.2200425
+</td>
+<td style="text-align:right;">
+0.1283925
+</td>
+<td style="text-align:right;">
+-0.0957397
+</td>
+<td style="text-align:right;">
+0.0427202
+</td>
+<td style="text-align:right;">
+-0.0180031
+</td>
+<td style="text-align:right;">
+-0.0074496
+</td>
+<td style="text-align:right;">
+0.0089815
+</td>
+<td style="text-align:right;">
+0.0046269
 </td>
 </tr>
 <tr>
@@ -649,19 +859,49 @@ tv_film
 sports_fandom
 </td>
 <td style="text-align:right;">
-0.4080358
+-0.2877318
 </td>
 <td style="text-align:right;">
-0.0410039
+-0.3169236
 </td>
 <td style="text-align:right;">
--0.0786319
+0.0519967
 </td>
 <td style="text-align:right;">
-0.0300435
+0.0572327
 </td>
 <td style="text-align:right;">
--0.0138759
+-0.0327901
+</td>
+<td style="text-align:right;">
+0.0084356
+</td>
+<td style="text-align:right;">
+-0.0686250
+</td>
+<td style="text-align:right;">
+-0.1095287
+</td>
+<td style="text-align:right;">
+0.0181730
+</td>
+<td style="text-align:right;">
+-0.0281742
+</td>
+<td style="text-align:right;">
+0.0611708
+</td>
+<td style="text-align:right;">
+-0.0198055
+</td>
+<td style="text-align:right;">
+-0.0091532
+</td>
+<td style="text-align:right;">
+-0.0045378
+</td>
+<td style="text-align:right;">
+-0.0147725
 </td>
 </tr>
 <tr>
@@ -669,19 +909,49 @@ sports_fandom
 politics
 </td>
 <td style="text-align:right;">
-0.0395618
+-0.1302662
 </td>
 <td style="text-align:right;">
-0.2122630
+0.0139400
 </td>
 <td style="text-align:right;">
-0.3882656
+-0.4899027
 </td>
 <td style="text-align:right;">
-0.1667712
+-0.1967260
 </td>
 <td style="text-align:right;">
-0.2595698
+-0.0579449
+</td>
+<td style="text-align:right;">
+-0.1299734
+</td>
+<td style="text-align:right;">
+-0.0652120
+</td>
+<td style="text-align:right;">
+0.0148842
+</td>
+<td style="text-align:right;">
+0.0345775
+</td>
+<td style="text-align:right;">
+-0.0354560
+</td>
+<td style="text-align:right;">
+-0.0161447
+</td>
+<td style="text-align:right;">
+-0.0062217
+</td>
+<td style="text-align:right;">
+-0.0096360
+</td>
+<td style="text-align:right;">
+0.0373917
+</td>
+<td style="text-align:right;">
+0.0272519
 </td>
 </tr>
 <tr>
@@ -689,19 +959,49 @@ politics
 food
 </td>
 <td style="text-align:right;">
-0.3455919
+-0.2969095
 </td>
 <td style="text-align:right;">
--0.1151529
+-0.2378087
 </td>
 <td style="text-align:right;">
--0.0478261
+0.1114773
 </td>
 <td style="text-align:right;">
--0.0482440
+-0.0733288
 </td>
 <td style="text-align:right;">
--0.0910880
+0.0661288
+</td>
+<td style="text-align:right;">
+0.0161941
+</td>
+<td style="text-align:right;">
+0.0360897
+</td>
+<td style="text-align:right;">
+0.0898326
+</td>
+<td style="text-align:right;">
+0.0536701
+</td>
+<td style="text-align:right;">
+-0.1034685
+</td>
+<td style="text-align:right;">
+0.0069475
+</td>
+<td style="text-align:right;">
+0.0055286
+</td>
+<td style="text-align:right;">
+-0.0154795
+</td>
+<td style="text-align:right;">
+0.0304101
+</td>
+<td style="text-align:right;">
+0.0059862
 </td>
 </tr>
 <tr>
@@ -709,19 +1009,49 @@ food
 family
 </td>
 <td style="text-align:right;">
-0.2370016
+-0.2442687
 </td>
 <td style="text-align:right;">
-0.0491769
+-0.1962532
 </td>
 <td style="text-align:right;">
--0.1009776
+0.0493184
 </td>
 <td style="text-align:right;">
-0.0057173
+0.0727193
 </td>
 <td style="text-align:right;">
--0.0680072
+-0.0107816
+</td>
+<td style="text-align:right;">
+0.0471880
+</td>
+<td style="text-align:right;">
+-0.1001581
+</td>
+<td style="text-align:right;">
+-0.0221481
+</td>
+<td style="text-align:right;">
+0.0017765
+</td>
+<td style="text-align:right;">
+-0.1002656
+</td>
+<td style="text-align:right;">
+-0.0476679
+</td>
+<td style="text-align:right;">
+-0.0346990
+</td>
+<td style="text-align:right;">
+-0.0347994
+</td>
+<td style="text-align:right;">
+-0.0185677
+</td>
+<td style="text-align:right;">
+-0.0139360
 </td>
 </tr>
 <tr>
@@ -729,19 +1059,49 @@ family
 home_and_garden
 </td>
 <td style="text-align:right;">
--0.0220907
+-0.1157650
 </td>
 <td style="text-align:right;">
-0.0449082
+0.0468035
 </td>
 <td style="text-align:right;">
--0.0018547
+-0.0211790
 </td>
 <td style="text-align:right;">
-0.0117647
+-0.0099351
 </td>
 <td style="text-align:right;">
--0.0456691
+0.0379741
+</td>
+<td style="text-align:right;">
+0.0387891
+</td>
+<td style="text-align:right;">
+0.0939256
+</td>
+<td style="text-align:right;">
+-0.0987512
+</td>
+<td style="text-align:right;">
+-0.0805429
+</td>
+<td style="text-align:right;">
+0.2661858
+</td>
+<td style="text-align:right;">
+-0.0528708
+</td>
+<td style="text-align:right;">
+0.6221241
+</td>
+<td style="text-align:right;">
+-0.5488918
+</td>
+<td style="text-align:right;">
+0.1816033
+</td>
+<td style="text-align:right;">
+-0.3602613
 </td>
 </tr>
 <tr>
@@ -749,19 +1109,49 @@ home_and_garden
 music
 </td>
 <td style="text-align:right;">
--0.0539143
+-0.1240892
 </td>
 <td style="text-align:right;">
-0.0386283
+0.1442595
 </td>
 <td style="text-align:right;">
--0.0809505
+0.0122877
 </td>
 <td style="text-align:right;">
--0.0685288
+0.0825827
 </td>
 <td style="text-align:right;">
-0.0250874
+0.0661952
+</td>
+<td style="text-align:right;">
+-0.0108636
+</td>
+<td style="text-align:right;">
+0.1477405
+</td>
+<td style="text-align:right;">
+-0.0889245
+</td>
+<td style="text-align:right;">
+0.0729134
+</td>
+<td style="text-align:right;">
+-0.1841356
+</td>
+<td style="text-align:right;">
+0.6916360
+</td>
+<td style="text-align:right;">
+0.0341660
+</td>
+<td style="text-align:right;">
+-0.0322028
+</td>
+<td style="text-align:right;">
+0.0593190
+</td>
+<td style="text-align:right;">
+-0.0488862
 </td>
 </tr>
 <tr>
@@ -769,19 +1159,49 @@ music
 news
 </td>
 <td style="text-align:right;">
-0.0982609
+-0.1276433
 </td>
 <td style="text-align:right;">
-0.1268346
+-0.0361989
 </td>
 <td style="text-align:right;">
-0.3373947
+-0.3360356
 </td>
 <td style="text-align:right;">
-0.1327367
+-0.1768761
 </td>
 <td style="text-align:right;">
-0.2280609
+-0.0250647
+</td>
+<td style="text-align:right;">
+-0.0943915
+</td>
+<td style="text-align:right;">
+-0.1437097
+</td>
+<td style="text-align:right;">
+-0.4628432
+</td>
+<td style="text-align:right;">
+0.0105521
+</td>
+<td style="text-align:right;">
+0.0811766
+</td>
+<td style="text-align:right;">
+-0.0225728
+</td>
+<td style="text-align:right;">
+-0.0542257
+</td>
+<td style="text-align:right;">
+0.0354216
+</td>
+<td style="text-align:right;">
+-0.0215986
+</td>
+<td style="text-align:right;">
+0.0170226
 </td>
 </tr>
 <tr>
@@ -789,19 +1209,49 @@ news
 online_gaming
 </td>
 <td style="text-align:right;">
--0.0705210
+-0.0738898
 </td>
 <td style="text-align:right;">
-0.0556572
+0.0835916
 </td>
 <td style="text-align:right;">
-0.0160237
+-0.0551081
 </td>
 <td style="text-align:right;">
--0.5194713
+0.2207630
 </td>
 <td style="text-align:right;">
-0.0255499
+0.4764231
+</td>
+<td style="text-align:right;">
+-0.0108467
+</td>
+<td style="text-align:right;">
+-0.2880784
+</td>
+<td style="text-align:right;">
+0.0606577
+</td>
+<td style="text-align:right;">
+-0.0416637
+</td>
+<td style="text-align:right;">
+-0.0103746
+</td>
+<td style="text-align:right;">
+-0.1435305
+</td>
+<td style="text-align:right;">
+-0.0132670
+</td>
+<td style="text-align:right;">
+0.0249890
+</td>
+<td style="text-align:right;">
+-0.0003836
+</td>
+<td style="text-align:right;">
+-0.0027136
 </td>
 </tr>
 <tr>
@@ -809,19 +1259,49 @@ online_gaming
 shopping
 </td>
 <td style="text-align:right;">
--0.1787867
+-0.1329950
 </td>
 <td style="text-align:right;">
-0.1690414
+0.2098528
 </td>
 <td style="text-align:right;">
--0.1576784
+-0.0472226
 </td>
 <td style="text-align:right;">
-0.1982797
+0.1036115
 </td>
 <td style="text-align:right;">
--0.2752010
+-0.1974542
+</td>
+<td style="text-align:right;">
+0.4261786
+</td>
+<td style="text-align:right;">
+-0.0860955
+</td>
+<td style="text-align:right;">
+0.0337983
+</td>
+<td style="text-align:right;">
+0.0491672
+</td>
+<td style="text-align:right;">
+-0.1283639
+</td>
+<td style="text-align:right;">
+-0.0421860
+</td>
+<td style="text-align:right;">
+-0.0610029
+</td>
+<td style="text-align:right;">
+-0.0874042
+</td>
+<td style="text-align:right;">
+0.1231248
+</td>
+<td style="text-align:right;">
+-0.0352813
 </td>
 </tr>
 <tr>
@@ -829,19 +1309,49 @@ shopping
 health_nutrition
 </td>
 <td style="text-align:right;">
--0.0668314
+-0.1242011
 </td>
 <td style="text-align:right;">
--0.4734191
+0.1465778
 </td>
 <td style="text-align:right;">
-0.2183781
+0.2255148
 </td>
 <td style="text-align:right;">
-0.0221055
+-0.4634666
 </td>
 <td style="text-align:right;">
--0.1979115
+0.1671597
+</td>
+<td style="text-align:right;">
+0.0788771
+</td>
+<td style="text-align:right;">
+-0.0386183
+</td>
+<td style="text-align:right;">
+0.0368803
+</td>
+<td style="text-align:right;">
+0.0552426
+</td>
+<td style="text-align:right;">
+-0.0317932
+</td>
+<td style="text-align:right;">
+-0.0290881
+</td>
+<td style="text-align:right;">
+-0.0061949
+</td>
+<td style="text-align:right;">
+0.0157196
+</td>
+<td style="text-align:right;">
+-0.0201629
+</td>
+<td style="text-align:right;">
+-0.0288729
 </td>
 </tr>
 <tr>
@@ -849,19 +1359,49 @@ health_nutrition
 college_uni
 </td>
 <td style="text-align:right;">
--0.0872661
+-0.0941567
 </td>
 <td style="text-align:right;">
-0.1018343
+0.1159597
 </td>
 <td style="text-align:right;">
--0.0031125
+-0.0854124
 </td>
 <td style="text-align:right;">
--0.5549200
+0.2555873
 </td>
 <td style="text-align:right;">
-0.0307502
+0.4870183
+</td>
+<td style="text-align:right;">
+0.0044168
+</td>
+<td style="text-align:right;">
+-0.1854095
+</td>
+<td style="text-align:right;">
+0.0425867
+</td>
+<td style="text-align:right;">
+-0.0050862
+</td>
+<td style="text-align:right;">
+-0.0421472
+</td>
+<td style="text-align:right;">
+0.0504708
+</td>
+<td style="text-align:right;">
+0.0100942
+</td>
+<td style="text-align:right;">
+0.0085032
+</td>
+<td style="text-align:right;">
+-0.0011934
+</td>
+<td style="text-align:right;">
+-0.0152637
 </td>
 </tr>
 <tr>
@@ -869,19 +1409,49 @@ college_uni
 sports_playing
 </td>
 <td style="text-align:right;">
--0.0562136
+-0.1302165
 </td>
 <td style="text-align:right;">
-0.0488126
+0.1085954
 </td>
 <td style="text-align:right;">
--0.0277698
+-0.0425946
 </td>
 <td style="text-align:right;">
--0.3429553
+0.1756699
 </td>
 <td style="text-align:right;">
-0.0260842
+0.3706463
+</td>
+<td style="text-align:right;">
+-0.0270353
+</td>
+<td style="text-align:right;">
+-0.2186161
+</td>
+<td style="text-align:right;">
+0.0642182
+</td>
+<td style="text-align:right;">
+0.0057783
+</td>
+<td style="text-align:right;">
+0.0679643
+</td>
+<td style="text-align:right;">
+-0.0200389
+</td>
+<td style="text-align:right;">
+0.0058795
+</td>
+<td style="text-align:right;">
+0.0327012
+</td>
+<td style="text-align:right;">
+0.0098806
+</td>
+<td style="text-align:right;">
+-0.0028436
 </td>
 </tr>
 <tr>
@@ -889,19 +1459,49 @@ sports_playing
 cooking
 </td>
 <td style="text-align:right;">
--0.1668881
+-0.1888085
 </td>
 <td style="text-align:right;">
--0.3008648
+0.3142880
 </td>
 <td style="text-align:right;">
--0.2204246
+0.1944997
 </td>
 <td style="text-align:right;">
-0.0873051
+0.0102181
 </td>
 <td style="text-align:right;">
-0.3726213
+-0.1225223
+</td>
+<td style="text-align:right;">
+-0.3585904
+</td>
+<td style="text-align:right;">
+-0.0581956
+</td>
+<td style="text-align:right;">
+-0.0499145
+</td>
+<td style="text-align:right;">
+0.0037777
+</td>
+<td style="text-align:right;">
+-0.1112726
+</td>
+<td style="text-align:right;">
+-0.0944942
+</td>
+<td style="text-align:right;">
+-0.0000340
+</td>
+<td style="text-align:right;">
+-0.0113630
+</td>
+<td style="text-align:right;">
+-0.0040956
+</td>
+<td style="text-align:right;">
+-0.0146852
 </td>
 </tr>
 <tr>
@@ -909,19 +1509,49 @@ cooking
 eco
 </td>
 <td style="text-align:right;">
--0.0308353
+-0.1453356
 </td>
 <td style="text-align:right;">
--0.0242025
+0.0853220
 </td>
 <td style="text-align:right;">
-0.0010274
+0.0294496
 </td>
 <td style="text-align:right;">
-0.0586068
+-0.1234178
 </td>
 <td style="text-align:right;">
--0.1481715
+0.0159589
+</td>
+<td style="text-align:right;">
+0.1792195
+</td>
+<td style="text-align:right;">
+0.0019244
+</td>
+<td style="text-align:right;">
+0.0433338
+</td>
+<td style="text-align:right;">
+-0.0814164
+</td>
+<td style="text-align:right;">
+-0.1141970
+</td>
+<td style="text-align:right;">
+-0.0770978
+</td>
+<td style="text-align:right;">
+0.0836949
+</td>
+<td style="text-align:right;">
+-0.1861346
+</td>
+<td style="text-align:right;">
+-0.0968206
+</td>
+<td style="text-align:right;">
+0.5089230
 </td>
 </tr>
 <tr>
@@ -929,19 +1559,49 @@ eco
 computers
 </td>
 <td style="text-align:right;">
-0.0160870
+-0.1433312
 </td>
 <td style="text-align:right;">
-0.1247312
+0.0373349
 </td>
 <td style="text-align:right;">
-0.1910162
+-0.3670315
 </td>
 <td style="text-align:right;">
-0.1153943
+-0.1383127
 </td>
 <td style="text-align:right;">
-0.1705343
+-0.0576769
+</td>
+<td style="text-align:right;">
+-0.1393202
+</td>
+<td style="text-align:right;">
+-0.0105219
+</td>
+<td style="text-align:right;">
+0.3579370
+</td>
+<td style="text-align:right;">
+-0.0077437
+</td>
+<td style="text-align:right;">
+-0.1029623
+</td>
+<td style="text-align:right;">
+0.0175709
+</td>
+<td style="text-align:right;">
+0.0392234
+</td>
+<td style="text-align:right;">
+-0.0476849
+</td>
+<td style="text-align:right;">
+0.1258023
+</td>
+<td style="text-align:right;">
+0.0292445
 </td>
 </tr>
 <tr>
@@ -949,19 +1609,49 @@ computers
 business
 </td>
 <td style="text-align:right;">
--0.0417828
+-0.1350100
 </td>
 <td style="text-align:right;">
-0.0783457
+0.0987826
 </td>
 <td style="text-align:right;">
--0.0249920
+-0.1051755
 </td>
 <td style="text-align:right;">
-0.0449317
+0.0125158
 </td>
 <td style="text-align:right;">
--0.0199879
+-0.0518276
+</td>
+<td style="text-align:right;">
+0.0744011
+</td>
+<td style="text-align:right;">
+0.0880033
+</td>
+<td style="text-align:right;">
+0.1375102
+</td>
+<td style="text-align:right;">
+0.1111781
+</td>
+<td style="text-align:right;">
+0.0697041
+</td>
+<td style="text-align:right;">
+0.1162626
+</td>
+<td style="text-align:right;">
+-0.2231377
+</td>
+<td style="text-align:right;">
+0.1639895
+</td>
+<td style="text-align:right;">
+-0.3923349
+</td>
+<td style="text-align:right;">
+-0.6393167
 </td>
 </tr>
 <tr>
@@ -969,19 +1659,49 @@ business
 outdoors
 </td>
 <td style="text-align:right;">
--0.0168307
+-0.1426042
 </td>
 <td style="text-align:right;">
--0.3381732
+0.1135818
 </td>
 <td style="text-align:right;">
-0.2260617
+0.1403903
 </td>
 <td style="text-align:right;">
-0.0296874
+-0.4147432
 </td>
 <td style="text-align:right;">
--0.0913113
+0.1471715
+</td>
+<td style="text-align:right;">
+0.0352155
+</td>
+<td style="text-align:right;">
+-0.0611313
+</td>
+<td style="text-align:right;">
+-0.0761457
+</td>
+<td style="text-align:right;">
+-0.0265284
+</td>
+<td style="text-align:right;">
+0.0202541
+</td>
+<td style="text-align:right;">
+0.0755720
+</td>
+<td style="text-align:right;">
+-0.0523344
+</td>
+<td style="text-align:right;">
+0.0233885
+</td>
+<td style="text-align:right;">
+-0.0298491
+</td>
+<td style="text-align:right;">
+-0.0638328
 </td>
 </tr>
 <tr>
@@ -989,19 +1709,49 @@ outdoors
 crafts
 </td>
 <td style="text-align:right;">
-0.0717104
+-0.1936276
 </td>
 <td style="text-align:right;">
-0.0304891
+-0.0216232
 </td>
 <td style="text-align:right;">
--0.0510418
+-0.0023645
 </td>
 <td style="text-align:right;">
--0.0083744
+0.0229992
 </td>
 <td style="text-align:right;">
--0.0647362
+0.0369234
+</td>
+<td style="text-align:right;">
+0.0797569
+</td>
+<td style="text-align:right;">
+0.2378811
+</td>
+<td style="text-align:right;">
+0.0283239
+</td>
+<td style="text-align:right;">
+0.0255479
+</td>
+<td style="text-align:right;">
+0.0408013
+</td>
+<td style="text-align:right;">
+-0.3069508
+</td>
+<td style="text-align:right;">
+-0.1906190
+</td>
+<td style="text-align:right;">
+0.1987885
+</td>
+<td style="text-align:right;">
+0.2770423
+</td>
+<td style="text-align:right;">
+-0.0528203
 </td>
 </tr>
 <tr>
@@ -1009,19 +1759,49 @@ crafts
 automotive
 </td>
 <td style="text-align:right;">
-0.0808430
+-0.1313252
 </td>
 <td style="text-align:right;">
-0.1441375
+-0.0315641
 </td>
 <td style="text-align:right;">
-0.1675895
+-0.1908427
 </td>
 <td style="text-align:right;">
-0.1203127
+-0.0392117
 </td>
 <td style="text-align:right;">
-0.0955183
+-0.0574080
+</td>
+<td style="text-align:right;">
+0.0587209
+</td>
+<td style="text-align:right;">
+-0.2411920
+</td>
+<td style="text-align:right;">
+-0.5856243
+</td>
+<td style="text-align:right;">
+-0.0566021
+</td>
+<td style="text-align:right;">
+0.0750530
+</td>
+<td style="text-align:right;">
+0.0029877
+</td>
+<td style="text-align:right;">
+-0.1105688
+</td>
+<td style="text-align:right;">
+0.0247119
+</td>
+<td style="text-align:right;">
+-0.0375769
+</td>
+<td style="text-align:right;">
+-0.0011638
 </td>
 </tr>
 <tr>
@@ -1029,19 +1809,49 @@ automotive
 art
 </td>
 <td style="text-align:right;">
--0.0090801
+-0.0979493
 </td>
 <td style="text-align:right;">
-0.0425026
+0.0603471
 </td>
 <td style="text-align:right;">
-0.0043658
+-0.0498916
 </td>
 <td style="text-align:right;">
--0.1486188
+0.0616327
 </td>
 <td style="text-align:right;">
-0.0273318
+0.1640864
+</td>
+<td style="text-align:right;">
+0.0275391
+</td>
+<td style="text-align:right;">
+0.4885459
+</td>
+<td style="text-align:right;">
+-0.1646508
+</td>
+<td style="text-align:right;">
+0.0541738
+</td>
+<td style="text-align:right;">
+-0.0360820
+</td>
+<td style="text-align:right;">
+-0.4324374
+</td>
+<td style="text-align:right;">
+-0.0665251
+</td>
+<td style="text-align:right;">
+0.0136811
+</td>
+<td style="text-align:right;">
+-0.0107238
+</td>
+<td style="text-align:right;">
+-0.0050409
 </td>
 </tr>
 <tr>
@@ -1049,19 +1859,49 @@ art
 religion
 </td>
 <td style="text-align:right;">
-0.4233344
+-0.2971000
 </td>
 <td style="text-align:right;">
--0.0216919
+-0.3161528
 </td>
 <td style="text-align:right;">
--0.1641208
+0.0931294
 </td>
 <td style="text-align:right;">
--0.0164119
+0.0665564
 </td>
 <td style="text-align:right;">
--0.0223728
+-0.0217320
+</td>
+<td style="text-align:right;">
+-0.0277098
+</td>
+<td style="text-align:right;">
+0.0226037
+</td>
+<td style="text-align:right;">
+0.1017041
+</td>
+<td style="text-align:right;">
+0.0321137
+</td>
+<td style="text-align:right;">
+-0.0655562
+</td>
+<td style="text-align:right;">
+0.0677932
+</td>
+<td style="text-align:right;">
+0.0435842
+</td>
+<td style="text-align:right;">
+-0.0216256
+</td>
+<td style="text-align:right;">
+0.0315903
+</td>
+<td style="text-align:right;">
+0.0022931
 </td>
 </tr>
 <tr>
@@ -1069,19 +1909,49 @@ religion
 beauty
 </td>
 <td style="text-align:right;">
--0.0569933
+-0.2015184
 </td>
 <td style="text-align:right;">
--0.1374712
+0.2086099
 </td>
 <td style="text-align:right;">
--0.2964247
+0.1507105
 </td>
 <td style="text-align:right;">
-0.0788073
+0.1469076
 </td>
 <td style="text-align:right;">
-0.3817464
+-0.1859478
+</td>
+<td style="text-align:right;">
+-0.3666419
+</td>
+<td style="text-align:right;">
+-0.0207103
+</td>
+<td style="text-align:right;">
+-0.0620746
+</td>
+<td style="text-align:right;">
+-0.0178329
+</td>
+<td style="text-align:right;">
+-0.0375752
+</td>
+<td style="text-align:right;">
+-0.0517911
+</td>
+<td style="text-align:right;">
+0.0227802
+</td>
+<td style="text-align:right;">
+0.0177541
+</td>
+<td style="text-align:right;">
+-0.0194130
+</td>
+<td style="text-align:right;">
+0.0164549
 </td>
 </tr>
 <tr>
@@ -1089,19 +1959,49 @@ beauty
 parenting
 </td>
 <td style="text-align:right;">
-0.4025340
+-0.2940041
 </td>
 <td style="text-align:right;">
--0.0207748
+-0.2950822
 </td>
 <td style="text-align:right;">
--0.1384310
+0.0891655
 </td>
 <td style="text-align:right;">
-0.0269295
+0.0473605
 </td>
 <td style="text-align:right;">
--0.0294648
+-0.0416765
+</td>
+<td style="text-align:right;">
+-0.0136606
+</td>
+<td style="text-align:right;">
+-0.0354992
+</td>
+<td style="text-align:right;">
+0.0608946
+</td>
+<td style="text-align:right;">
+-0.0103674
+</td>
+<td style="text-align:right;">
+-0.0404866
+</td>
+<td style="text-align:right;">
+0.0298664
+</td>
+<td style="text-align:right;">
+-0.0092796
+</td>
+<td style="text-align:right;">
+-0.0267570
+</td>
+<td style="text-align:right;">
+0.0009726
+</td>
+<td style="text-align:right;">
+0.0000226
 </td>
 </tr>
 <tr>
@@ -1109,19 +2009,49 @@ parenting
 dating
 </td>
 <td style="text-align:right;">
--0.0191894
+-0.1051565
 </td>
 <td style="text-align:right;">
--0.0283745
+0.0715352
 </td>
 <td style="text-align:right;">
--0.0191197
+-0.0313463
 </td>
 <td style="text-align:right;">
-0.0111650
+-0.0281485
 </td>
 <td style="text-align:right;">
-0.0468116
+-0.0103304
+</td>
+<td style="text-align:right;">
+0.0035668
+</td>
+<td style="text-align:right;">
+0.0290614
+</td>
+<td style="text-align:right;">
+0.1659007
+</td>
+<td style="text-align:right;">
+-0.0539346
+</td>
+<td style="text-align:right;">
+0.7557505
+</td>
+<td style="text-align:right;">
+0.0180790
+</td>
+<td style="text-align:right;">
+0.0026257
+</td>
+<td style="text-align:right;">
+0.1442477
+</td>
+<td style="text-align:right;">
+-0.1365604
+</td>
+<td style="text-align:right;">
+0.1380445
 </td>
 </tr>
 <tr>
@@ -1129,19 +2059,49 @@ dating
 school
 </td>
 <td style="text-align:right;">
-0.2730599
+-0.2806379
 </td>
 <td style="text-align:right;">
--0.0004227
+-0.1975724
 </td>
 <td style="text-align:right;">
--0.1904019
+0.0816440
 </td>
 <td style="text-align:right;">
-0.0475401
+0.0858464
 </td>
 <td style="text-align:right;">
-0.0016010
+-0.0894316
+</td>
+<td style="text-align:right;">
+0.0126629
+</td>
+<td style="text-align:right;">
+0.0211344
+</td>
+<td style="text-align:right;">
+0.0782853
+</td>
+<td style="text-align:right;">
+-0.0262528
+</td>
+<td style="text-align:right;">
+0.2471712
+</td>
+<td style="text-align:right;">
+0.0009604
+</td>
+<td style="text-align:right;">
+-0.0278577
+</td>
+<td style="text-align:right;">
+0.0422235
+</td>
+<td style="text-align:right;">
+-0.0481912
+</td>
+<td style="text-align:right;">
+0.0510706
 </td>
 </tr>
 <tr>
@@ -1149,19 +2109,49 @@ school
 personal_fitness
 </td>
 <td style="text-align:right;">
--0.0636587
+-0.1375011
 </td>
 <td style="text-align:right;">
--0.4453884
+0.1446118
 </td>
 <td style="text-align:right;">
-0.2068289
+0.2173747
 </td>
 <td style="text-align:right;">
-0.0273340
+-0.4444448
 </td>
 <td style="text-align:right;">
--0.2145982
+0.1566241
+</td>
+<td style="text-align:right;">
+0.0941234
+</td>
+<td style="text-align:right;">
+-0.0432723
+</td>
+<td style="text-align:right;">
+0.0367987
+</td>
+<td style="text-align:right;">
+0.0427852
+</td>
+<td style="text-align:right;">
+-0.0288074
+</td>
+<td style="text-align:right;">
+-0.0298984
+</td>
+<td style="text-align:right;">
+-0.0034670
+</td>
+<td style="text-align:right;">
+0.0245425
+</td>
+<td style="text-align:right;">
+-0.0327817
+</td>
+<td style="text-align:right;">
+-0.0514667
 </td>
 </tr>
 <tr>
@@ -1169,19 +2159,49 @@ personal_fitness
 fashion
 </td>
 <td style="text-align:right;">
--0.1353484
+-0.1838818
 </td>
 <td style="text-align:right;">
--0.1552167
+0.2797997
 </td>
 <td style="text-align:right;">
--0.3006239
+0.1387695
 </td>
 <td style="text-align:right;">
-0.0772475
+0.1379828
 </td>
 <td style="text-align:right;">
-0.4048249
+-0.1711968
+</td>
+<td style="text-align:right;">
+-0.3572967
+</td>
+<td style="text-align:right;">
+-0.0297060
+</td>
+<td style="text-align:right;">
+-0.0198319
+</td>
+<td style="text-align:right;">
+-0.0234885
+</td>
+<td style="text-align:right;">
+0.0400747
+</td>
+<td style="text-align:right;">
+-0.0987629
+</td>
+<td style="text-align:right;">
+0.0046610
+</td>
+<td style="text-align:right;">
+0.0181928
+</td>
+<td style="text-align:right;">
+-0.0412897
+</td>
+<td style="text-align:right;">
+0.0158580
 </td>
 </tr>
 <tr>
@@ -1189,19 +2209,49 @@ fashion
 small_business
 </td>
 <td style="text-align:right;">
--0.0301604
+-0.1190418
 </td>
 <td style="text-align:right;">
-0.0813814
+0.0940481
 </td>
 <td style="text-align:right;">
--0.0233629
+-0.1005973
 </td>
 <td style="text-align:right;">
--0.0486852
+0.0776868
 </td>
 <td style="text-align:right;">
-0.0023644
+0.0331575
+</td>
+<td style="text-align:right;">
+0.0517378
+</td>
+<td style="text-align:right;">
+0.2103450
+</td>
+<td style="text-align:right;">
+0.0131607
+</td>
+<td style="text-align:right;">
+-0.1150867
+</td>
+<td style="text-align:right;">
+-0.0039469
+</td>
+<td style="text-align:right;">
+0.1115894
+</td>
+<td style="text-align:right;">
+-0.0231884
+</td>
+<td style="text-align:right;">
+-0.2582224
+</td>
+<td style="text-align:right;">
+-0.6351889
+</td>
+<td style="text-align:right;">
+0.2824490
 </td>
 </tr>
 <tr>
@@ -1209,19 +2259,49 @@ small_business
 spam
 </td>
 <td style="text-align:right;">
-0.0029063
+-0.0114609
 </td>
 <td style="text-align:right;">
--0.0017889
+-0.0045516
 </td>
 <td style="text-align:right;">
-0.0230007
+-0.0126307
 </td>
 <td style="text-align:right;">
--0.0121189
+-0.0213321
 </td>
 <td style="text-align:right;">
--0.0150374
+0.0197333
+</td>
+<td style="text-align:right;">
+0.0105774
+</td>
+<td style="text-align:right;">
+0.0667527
+</td>
+<td style="text-align:right;">
+0.0118062
+</td>
+<td style="text-align:right;">
+-0.6588500
+</td>
+<td style="text-align:right;">
+-0.1161779
+</td>
+<td style="text-align:right;">
+-0.0031579
+</td>
+<td style="text-align:right;">
+-0.0447172
+</td>
+<td style="text-align:right;">
+0.1028954
+</td>
+<td style="text-align:right;">
+0.0939977
+</td>
+<td style="text-align:right;">
+-0.1649452
 </td>
 </tr>
 <tr>
@@ -1229,29 +2309,69 @@ spam
 adult
 </td>
 <td style="text-align:right;">
-0.0141523
+-0.0267310
 </td>
 <td style="text-align:right;">
--0.0047953
+-0.0069182
 </td>
 <td style="text-align:right;">
-0.0292899
+0.0028672
 </td>
 <td style="text-align:right;">
--0.0092229
+-0.0232396
 </td>
 <td style="text-align:right;">
--0.0170209
+0.0114125
+</td>
+<td style="text-align:right;">
+0.0211540
+</td>
+<td style="text-align:right;">
+0.0695804
+</td>
+<td style="text-align:right;">
+0.0044300
+</td>
+<td style="text-align:right;">
+-0.6887907
+</td>
+<td style="text-align:right;">
+-0.0588546
+</td>
+<td style="text-align:right;">
+0.0272910
+</td>
+<td style="text-align:right;">
+-0.0800352
+</td>
+<td style="text-align:right;">
+0.0088180
+</td>
+<td style="text-align:right;">
+-0.0428215
+</td>
+<td style="text-align:right;">
+-0.0538473
 </td>
 </tr>
 </tbody>
 </table>
 
-    ## Importance of first k=5 (out of 36) components:
-    ##                            PC1     PC2     PC3     PC4     PC5
-    ## Standard deviation     1.69908 1.61882 1.54302 1.46058 1.40975
-    ## Proportion of Variance 0.08019 0.07279 0.06614 0.05926 0.05521
-    ## Cumulative Proportion  0.08019 0.15299 0.21912 0.27838 0.33358
+    ## Importance of first k=15 (out of 36) components:
+    ##                           PC1     PC2     PC3     PC4     PC5     PC6     PC7
+    ## Standard deviation     2.1186 1.69824 1.59388 1.53457 1.48027 1.36885 1.28577
+    ## Proportion of Variance 0.1247 0.08011 0.07057 0.06541 0.06087 0.05205 0.04592
+    ## Cumulative Proportion  0.1247 0.20479 0.27536 0.34077 0.40164 0.45369 0.49961
+    ##                            PC8     PC9    PC10    PC11    PC12    PC13    PC14
+    ## Standard deviation     1.19277 1.15127 1.06930 1.00566 0.96785 0.96131 0.94405
+    ## Proportion of Variance 0.03952 0.03682 0.03176 0.02809 0.02602 0.02567 0.02476
+    ## Cumulative Proportion  0.53913 0.57595 0.60771 0.63580 0.66182 0.68749 0.71225
+    ##                           PC15
+    ## Standard deviation     0.93297
+    ## Proportion of Variance 0.02418
+    ## Cumulative Proportion  0.73643
+
+15 principal components explain nearly 73% of the variation in data.
 
 ![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-1.png)
 

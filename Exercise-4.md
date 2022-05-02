@@ -3440,5 +3440,11 @@ together.
 ![Gephi plot to the association rules for confidence and supoort over
 0.01](Exercise-4_files/figure-markdown_github/screenshot1.png)
 
+This plot shows some nice cluster formations. dairy products and their
+complements seem to be clubbed together (milk, cheese, sugar etc).
+Vegetables and its acquaintances, cream and its acquaintances etc are
+forming up ina cluster. I have hidden the lables for association rules
+in order to declutter the web.
+
 ![Cluster composition in the Gephi
 plot](Exercise-4_files/figure-markdown_github/screenshot2.png)

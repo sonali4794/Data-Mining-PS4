@@ -2379,15 +2379,19 @@ There is no contrasting here. Most of NutritionH20 followers are heavy
 participants in religion, food, parenting, sports and school. PC2 seems
 to contrast between serious segments like religion, news, family versus
 casual segments like fitness, dating, shopping (entertainment related).
-PC4 seems to contrast betwwen food and health versus everything else.
-This is quite interesting partition. It is interesting to note that
-adult and spam categories are mostly in middle of the spectrum, they are
-rarely in extreme of the dataset. That maybe explained by the fact that
-these were mostly filtered out and what remained may not have been
-significant for PCA to study much about it. Since most of the components
-individually explain very little of the data their partitioning
-resembles each other quite a bit. For example PC9 contrasts
-entertainment segments similar to PC2.
+PC4 seems to contrast between food and health versus everything else.
+This is quite interesting partition. PC15 seems to contrast fun stuff
+(film, travel, fashion) with non-fun stuff (college, health, business)
+and funnily it is centered around parenting. There are some unexpected
+contrasts too for example PC12 contrasts current events with news and
+politics, PC10 constrasts home and garden with eco etc. It is
+interesting to note that adult and spam categories are mostly in middle
+of the spectrum, they are rarely in extreme of the dataset. That maybe
+explained by the fact that these were mostly filtered out and what
+remained may not have been significant for PCA to study much about it.
+Since most of the components individually explain very little of the
+data their partitioning resembles each other quite a bit. For example
+PC9 contrasts entertainment segments similar to PC2.
 
 If we were to run supervised learning models, we would benefit from
 using these 15 components instead of all 36 (reduced by more than half)
@@ -3447,6 +3451,7 @@ forming up ina cluster. I have hidden the lables for association rules
 in order to declutter the web.
 
 ![](Exercise-4_files/figure-markdown_github/screenshot3.png) Here is
-another image with a little zoomed in and indicating the degree of nodes
-![Cluster composition in the Gephi
-plot](Exercise-4_files/figure-markdown_github/screenshot2.png)
+another image with a little zoomed in and indicating the degree of
+nodes. Whole Milk, vegetables and yogurt seem to be connected
+extensively. Interestingly you will also note that these are the
+products that are appearing in the lower lift table which is expected.

@@ -4,7 +4,7 @@ author: "Sonali Mishra"
 date: "05/01/2022"
 output:
   md_document:
-    variant: gfm
+    variant: markdown_github
 always_allow_html: true
 ---
 
@@ -379,6 +379,7 @@ plot(groccery_rules, method='two-key plot')
 ```
 
 As expected higher confidence leads to lower lift. There is a clear inverse relation between the two. We have chosen support threshold of 0.001 and confidence threshold of 0.1 with highest transaction level at 4 and lowest at 1. Basically I have removed the entries where it reports a transaction with itself for purpose of this exercise. 
+Support and lift also have an inverse relation which is understandanble. If something has higher support which means they are bought frequently irrespective of any complement so its associated lift is likely to be low. The Two-way plot shows that as the number of transaction levels increases their confidence is higher and support is lower. Probability of buying something conditioned on 3 products is less than probability of buying something conditioned on 1 so this makes sense. 
 
 ```{r}
 df2 = arules::DATAFRAME(groccery_rules)
@@ -392,7 +393,18 @@ df4
 
 ```
 
-This is a quite insightful table
+This is a quite insightful table. Lets look at an example. Probability of buying ham, white bread and processed cheese is 0.1%. But probability of buying processed cheese given you have bought ham and white bread is 38%. Buying ham, white bread and processed cheese occurred 22 times more frequently than you would expect purchase of ham and white bread and purchase of processed cheese to occur independently. This tables list top 20 lift data in the association rules. These are all very conceivable associations. Evidently the table lists complements. 
+
+```{r}
+df5 = df2 %>%
+  as.data.frame() %>%
+  arrange(lift) 
+df6 = head(df5, 20) %>%
+  kbl()%>%
+  kable_material_dark()
+df6
+```
+Now lets look at lowest 20 lift rules. Some of these look like supplements like curd, milk, yogurt and soda while some others just look like bad choices to go with each other infact so incompatible that people are more likely to buy them independently than to buy them together. 
 
 ```{r}
 sub1 = subset(groccery_rules, subset=confidence > 0.01 & support > 0.01)
@@ -400,7 +412,6 @@ saveAsGraph(sub1, file = "groceryrules.graphml")
 
 knitr::include_graphics("C:/Users/hp/Documents/Data-Mining-PS4/screenshot1.png")
 knitr::include_graphics("C:/Users/hp/Documents/Data-Mining-PS4/screenshot2.png")
-
 
 ```
 

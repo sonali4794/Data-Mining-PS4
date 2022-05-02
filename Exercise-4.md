@@ -16,20 +16,20 @@ Lets look at Kmeans and Kmeans++ clustering.
 KMEANS Analyse if any clustering occurs with 2 clusters based on wine
 color
 
-![](Exercise-4_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 Analyse if any clustering occurs with 10 clusters based on wine quality
 
-![](Exercise-4_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 KMEANS++ Analyse if any clustering occurs with 2 clusters based on wine
 color
 
-![](Exercise-4_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 Analyse if any clustering occurs with 10 clusters based on wine quality
 
-![](Exercise-4_files/figure-gfm/unnamed-chunk-5-1.png)<!-- --> Both
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-5-1.png) Both
 kmeans and kmeans++ provide good results for clustering for wine color
 but neither does that well for quality based clustering. If we have to
 pick one of these two models we will use within and bewtween clusters to
@@ -76,10 +76,10 @@ between cluster error for wine
 within cluster error for quality
 </td>
 <td style="text-align:right;">
-30549.36
+30661.38
 </td>
 <td style="text-align:right;">
-30549.42
+30491.97
 </td>
 </tr>
 <tr>
@@ -87,10 +87,10 @@ within cluster error for quality
 between cluster error for quality
 </td>
 <td style="text-align:right;">
-40906.64
+40794.62
 </td>
 <td style="text-align:right;">
-40906.58
+40964.03
 </td>
 </tr>
 </tbody>
@@ -103,7 +103,7 @@ and seperated clsuters.
 Now we try using PCA analysis First we use 2 components and see if any
 indicative clustering occurs for both color and quality
 
-![](Exercise-4_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-7-2.png)<!-- -->
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-7-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-7-2.png)
 <table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -254,7 +254,7 @@ increase summaries to improve clustering based on quality. This is also
 evident from the fact that 2 components explain only 50% of the
 variation in the data.
 
-![](Exercise-4_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-8-3.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-8-4.png)<!-- -->
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-8-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-8-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-8-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-8-4.png)
 <table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -486,21 +486,21 @@ correlation between these segments (my guess is that we will) then it
 may make sense to perform PCA and reduce the segments from 36 to
 whatever seems suitable.
 
-![](Exercise-4_files/figure-gfm/unnamed-chunk-9-1.png)<!-- --> I do
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-1.png) I do
 require a optimal number of clusters and I think computing from the
 elbow plot might be a good starting point for the same.
 
-![](Exercise-4_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
 From this plot I would start with 15 clusters.
 
-![](Exercise-4_files/figure-gfm/unnamed-chunk-11-1.png)<!-- --> This is
-just to get a pictorial view of 15 clustering of the data. I have taken
-two highly correlated market segments.
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-11-1.png) This
+is just to get a pictorial view of 15 clustering of the data. I have
+taken two highly correlated market segments.
 
 Next we do PCA on this
 
-![](Exercise-4_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-2.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-3.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-4.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-5.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-6.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-7.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-8.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-9.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-10.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-11.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-12.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-13.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-14.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-12-15.png)<!-- -->
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-4.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-5.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-6.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-7.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-8.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-9.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-10.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-11.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-12.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-13.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-14.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-15.png)
 <table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -2398,7 +2398,7 @@ while losing roghly 25% of the data.
 Here we look at multiple ways in which shopping baskets of consumers can
 be connected and analyse through lift parameter.
 
-![](Exercise-4_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-1.png)
 
 This gives a view of most popular items in shopping baskets for grocery
 shopping
@@ -2421,17 +2421,24 @@ shopping
     ## set transactions ...[170 item(s), 9835 transaction(s)] done [0.00s].
     ## sorting and recoding items ... [157 item(s)] done [0.00s].
     ## creating transaction tree ... done [0.00s].
-    ## checking subsets of size 1 2 3 4 done [0.00s].
+    ## checking subsets of size 1 2 3 4 done [0.01s].
     ## writing ... [30843 rule(s)] done [0.00s].
-    ## creating S4 object  ... done [0.02s].
+    ## creating S4 object  ... done [0.01s].
 
-![](Exercise-4_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-14-2.png)<!-- -->![](Exercise-4_files/figure-gfm/unnamed-chunk-14-3.png)<!-- -->
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-14-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-14-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-14-3.png)
 
 As expected higher confidence leads to lower lift. There is a clear
 inverse relation between the two. We have chosen support threshold of
 0.001 and confidence threshold of 0.1 with highest transaction level at
 4 and lowest at 1. Basically I have removed the entries where it reports
-a transaction with itself for purpose of this exercise.
+a transaction with itself for purpose of this exercise. Support and lift
+also have an inverse relation which is understandanble. If something has
+higher support which means they are bought frequently irrespective of
+any complement so its associated lift is likely to be low. The Two-way
+plot shows that as the number of transaction levels increases their
+confidence is higher and support is lower. Probability of buying
+something conditioned on 3 products is less than probability of buying
+something conditioned on 1 so this makes sense.
 
 <table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
@@ -2923,6 +2930,509 @@ count
 </tbody>
 </table>
 
-This is a quite insightful table
+This is a quite insightful table. Lets look at an example. Probability
+of buying ham, white bread and processed cheese is 0.1%. But probability
+of buying processed cheese given you have bought ham and white bread is
+38%. Buying ham, white bread and processed cheese occurred 22 times more
+frequently than you would expect purchase of ham and white bread and
+purchase of processed cheese to occur independently. This tables list
+top 20 lift data in the association rules. These are all very
+conceivable associations. Evidently the table lists complements.
 
-![](C:/Users/hp/Documents/Data-Mining-PS4/screenshot1.png)<!-- -->![](C:/Users/hp/Documents/Data-Mining-PS4/screenshot2.png)<!-- -->
+<table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+LHS
+</th>
+<th style="text-align:left;">
+RHS
+</th>
+<th style="text-align:right;">
+support
+</th>
+<th style="text-align:right;">
+confidence
+</th>
+<th style="text-align:right;">
+coverage
+</th>
+<th style="text-align:right;">
+lift
+</th>
+<th style="text-align:right;">
+count
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+{canned beer,shopping bags}
+</td>
+<td style="text-align:left;">
+{whole milk}
+</td>
+<td style="text-align:right;">
+0.0012201
+</td>
+<td style="text-align:right;">
+0.1071429
+</td>
+<td style="text-align:right;">
+0.0113879
+</td>
+<td style="text-align:right;">
+0.4193195
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{canned beer}
+</td>
+<td style="text-align:left;">
+{whole milk}
+</td>
+<td style="text-align:right;">
+0.0088460
+</td>
+<td style="text-align:right;">
+0.1138743
+</td>
+<td style="text-align:right;">
+0.0776817
+</td>
+<td style="text-align:right;">
+0.4456642
+</td>
+<td style="text-align:right;">
+87
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{UHT-milk}
+</td>
+<td style="text-align:left;">
+{whole milk}
+</td>
+<td style="text-align:right;">
+0.0039654
+</td>
+<td style="text-align:right;">
+0.1185410
+</td>
+<td style="text-align:right;">
+0.0334520
+</td>
+<td style="text-align:right;">
+0.4639280
+</td>
+<td style="text-align:right;">
+39
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{UHT-milk,yogurt}
+</td>
+<td style="text-align:left;">
+{whole milk}
+</td>
+<td style="text-align:right;">
+0.0010168
+</td>
+<td style="text-align:right;">
+0.1369863
+</td>
+<td style="text-align:right;">
+0.0074225
+</td>
+<td style="text-align:right;">
+0.5361163
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{bottled water,UHT-milk}
+</td>
+<td style="text-align:left;">
+{whole milk}
+</td>
+<td style="text-align:right;">
+0.0010168
+</td>
+<td style="text-align:right;">
+0.1388889
+</td>
+<td style="text-align:right;">
+0.0073208
+</td>
+<td style="text-align:right;">
+0.5435624
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{white wine}
+</td>
+<td style="text-align:left;">
+{whole milk}
+</td>
+<td style="text-align:right;">
+0.0026436
+</td>
+<td style="text-align:right;">
+0.1390374
+</td>
+<td style="text-align:right;">
+0.0190137
+</td>
+<td style="text-align:right;">
+0.5441437
+</td>
+<td style="text-align:right;">
+26
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{liquor}
+</td>
+<td style="text-align:left;">
+{rolls/buns}
+</td>
+<td style="text-align:right;">
+0.0011185
+</td>
+<td style="text-align:right;">
+0.1009174
+</td>
+<td style="text-align:right;">
+0.0110829
+</td>
+<td style="text-align:right;">
+0.5486583
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{curd,whole milk,yogurt}
+</td>
+<td style="text-align:left;">
+{soda}
+</td>
+<td style="text-align:right;">
+0.0010168
+</td>
+<td style="text-align:right;">
+0.1010101
+</td>
+<td style="text-align:right;">
+0.0100661
+</td>
+<td style="text-align:right;">
+0.5792620
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{curd,other vegetables,whole milk}
+</td>
+<td style="text-align:left;">
+{soda}
+</td>
+<td style="text-align:right;">
+0.0010168
+</td>
+<td style="text-align:right;">
+0.1030928
+</td>
+<td style="text-align:right;">
+0.0098627
+</td>
+<td style="text-align:right;">
+0.5912056
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{frozen fish}
+</td>
+<td style="text-align:left;">
+{soda}
+</td>
+<td style="text-align:right;">
+0.0012201
+</td>
+<td style="text-align:right;">
+0.1043478
+</td>
+<td style="text-align:right;">
+0.0116929
+</td>
+<td style="text-align:right;">
+0.5984028
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{canned beer}
+</td>
+<td style="text-align:left;">
+{other vegetables}
+</td>
+<td style="text-align:right;">
+0.0090493
+</td>
+<td style="text-align:right;">
+0.1164921
+</td>
+<td style="text-align:right;">
+0.0776817
+</td>
+<td style="text-align:right;">
+0.6020495
+</td>
+<td style="text-align:right;">
+89
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{white wine}
+</td>
+<td style="text-align:left;">
+{other vegetables}
+</td>
+<td style="text-align:right;">
+0.0022369
+</td>
+<td style="text-align:right;">
+0.1176471
+</td>
+<td style="text-align:right;">
+0.0190137
+</td>
+<td style="text-align:right;">
+0.6080183
+</td>
+<td style="text-align:right;">
+22
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{liquor}
+</td>
+<td style="text-align:left;">
+{other vegetables}
+</td>
+<td style="text-align:right;">
+0.0013218
+</td>
+<td style="text-align:right;">
+0.1192661
+</td>
+<td style="text-align:right;">
+0.0110829
+</td>
+<td style="text-align:right;">
+0.6163855
+</td>
+<td style="text-align:right;">
+13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{rolls/buns,UHT-milk}
+</td>
+<td style="text-align:left;">
+{whole milk}
+</td>
+<td style="text-align:right;">
+0.0010168
+</td>
+<td style="text-align:right;">
+0.1587302
+</td>
+<td style="text-align:right;">
+0.0064057
+</td>
+<td style="text-align:right;">
+0.6212141
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{photo/film}
+</td>
+<td style="text-align:left;">
+{other vegetables}
+</td>
+<td style="text-align:right;">
+0.0011185
+</td>
+<td style="text-align:right;">
+0.1208791
+</td>
+<td style="text-align:right;">
+0.0092527
+</td>
+<td style="text-align:right;">
+0.6247221
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{canned beer,sausage}
+</td>
+<td style="text-align:left;">
+{whole milk}
+</td>
+<td style="text-align:right;">
+0.0010168
+</td>
+<td style="text-align:right;">
+0.1612903
+</td>
+<td style="text-align:right;">
+0.0063040
+</td>
+<td style="text-align:right;">
+0.6312337
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{butter,whole milk}
+</td>
+<td style="text-align:left;">
+{soda}
+</td>
+<td style="text-align:right;">
+0.0030503
+</td>
+<td style="text-align:right;">
+0.1107011
+</td>
+<td style="text-align:right;">
+0.0275547
+</td>
+<td style="text-align:right;">
+0.6348370
+</td>
+<td style="text-align:right;">
+30
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{photo/film}
+</td>
+<td style="text-align:left;">
+{rolls/buns}
+</td>
+<td style="text-align:right;">
+0.0011185
+</td>
+<td style="text-align:right;">
+0.1208791
+</td>
+<td style="text-align:right;">
+0.0092527
+</td>
+<td style="text-align:right;">
+0.6571842
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{butter,domestic eggs}
+</td>
+<td style="text-align:left;">
+{soda}
+</td>
+<td style="text-align:right;">
+0.0011185
+</td>
+<td style="text-align:right;">
+0.1157895
+</td>
+<td style="text-align:right;">
+0.0096594
+</td>
+<td style="text-align:right;">
+0.6640172
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{curd,other vegetables}
+</td>
+<td style="text-align:left;">
+{soda}
+</td>
+<td style="text-align:right;">
+0.0020336
+</td>
+<td style="text-align:right;">
+0.1183432
+</td>
+<td style="text-align:right;">
+0.0171835
+</td>
+<td style="text-align:right;">
+0.6786620
+</td>
+<td style="text-align:right;">
+20
+</td>
+</tr>
+</tbody>
+</table>
+
+Now lets look at lowest 20 lift rules. Some of these look like
+supplements like curd, milk, yogurt and soda while some others just look
+like bad choices to go with each other infact so incompatible that
+people are more likely to buy them independently than to buy them
+together.
+
+<img src="C:/Users/hp/Documents/Data-Mining-PS4/screenshot1.png" width="1024" /><img src="C:/Users/hp/Documents/Data-Mining-PS4/screenshot2.png" width="371" />

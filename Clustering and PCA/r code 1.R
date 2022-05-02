@@ -93,13 +93,25 @@ D3_quality = data.frame(wine, z3_quality = c3_quality)
 ggplot(D3_quality) + geom_point(aes(x=color, y=density, col=factor(z3_quality)))
 
 
-#PCA
-pc1 = prcomp(X, scale=TRUE, rank=2)
-loadings = pc1$rotation
-scores = pc1$x
+#PCA for wine comparison 
+pc_wine = prcomp(X, scale=TRUE, rank=2)
+loadings = pc_wine$rotation
 
 qplot(scores[,1], scores[,2], color=wine$color, xlab='PCA1', ylab='PCA2')
+qplot(scores[,1], scores[,2], color=wine$quality, xlab='PCA1', ylab='PCA2')
 
-head(pc1$rotation)
-summary(pc1)
+pc_quality = prcomp(X, scale=TRUE, rank=4)
+loadings_summary = pc_quality$rotation %>%
+  as.data.frame()%>%
+  rownames_to_column('features')
+
+loadings_summary %>%
+  select(features, PC1) %>%
+  arrange(desc(PC1))
+
+complile = merge(wine, pc_quality$x, by = "row.names" )
+ggplot(complile) +
+  geom_col(aes(x=reorder(quality, PC2), y=PC2))+
+  coord_flip()
+
 

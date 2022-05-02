@@ -1,6 +1,40 @@
 ##Clustering and PCA
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-1-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-1-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-1-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-1-4.png)
+The idea is to see if there is any visible appearance of clustering
+based on color of wine and/or quality of wine. We work with 2 and 10
+clusters for wine and quality seperation respectively. We perform both
+kmeans clustering and hierarchial clustering. But dues to presence of
+too many outliers hierarchial clustering doesnt provide satisfying
+results. Next we also explore PCA. We start with 2 summaries and that
+gives us good results for clustering based on color of wine. To get
+better results for clustering based on quality we try with 4 components
+that cummulatively explain nearly 74% of the variation in the data but
+individually dont explain much.
+
+Lets look at Kmeans and Kmeans++ clustering.
+
+KMEANS Analyse if any clustering occurs with 2 clusters based on wine
+color
+
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-2-1.png)
+
+Analyse if any clustering occurs with 10 clusters based on wine quality
+
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-3-1.png)
+
+KMEANS++ Analyse if any clustering occurs with 2 clusters based on wine
+color
+
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-4-1.png)
+
+Analyse if any clustering occurs with 10 clusters based on wine quality
+
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-5-1.png) Both
+kmeans and kmeans++ provide good results for clustering for wine color
+but neither does that well for quality based clustering. If we have to
+pick one of these two models we will use within and bewtween clusters to
+check which is better.
+
 <table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -42,10 +76,10 @@ between cluster error for wine
 within cluster error for quality
 </td>
 <td style="text-align:right;">
-30667.58
+30661.38
 </td>
 <td style="text-align:right;">
-30553.13
+30491.97
 </td>
 </tr>
 <tr>
@@ -53,24 +87,161 @@ within cluster error for quality
 between cluster error for quality
 </td>
 <td style="text-align:right;">
-40788.42
+40794.62
 </td>
 <td style="text-align:right;">
-40902.87
+40964.03
 </td>
 </tr>
 </tbody>
 </table>
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-1-5.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-1-6.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-1-7.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-1-8.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-1-9.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-1-10.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-1-11.png)
+Clearly Kmeans++ would be our preference as it has a higher between
+cluster error and lower within clsuter error indicating more homgeneity
+and seperated clsuters.
 
-    ##                            PC1       PC2
-    ## fixed.acidity       -0.2387989 0.3363545
-    ## volatile.acidity    -0.3807575 0.1175497
-    ## citric.acid          0.1523884 0.1832994
-    ## residual.sugar       0.3459199 0.3299142
-    ## chlorides           -0.2901126 0.3152580
-    ## free.sulfur.dioxide  0.4309140 0.0719326
+Now we try using PCA analysis First we use 2 components and see if any
+indicative clustering occurs for both color and quality
+
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-7-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-7-2.png)
+<table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+features
+</th>
+<th style="text-align:right;">
+PC1
+</th>
+<th style="text-align:right;">
+PC2
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+fixed.acidity
+</td>
+<td style="text-align:right;">
+-0.2387989
+</td>
+<td style="text-align:right;">
+0.3363545
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+volatile.acidity
+</td>
+<td style="text-align:right;">
+-0.3807575
+</td>
+<td style="text-align:right;">
+0.1175497
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+citric.acid
+</td>
+<td style="text-align:right;">
+0.1523884
+</td>
+<td style="text-align:right;">
+0.1832994
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+residual.sugar
+</td>
+<td style="text-align:right;">
+0.3459199
+</td>
+<td style="text-align:right;">
+0.3299142
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+chlorides
+</td>
+<td style="text-align:right;">
+-0.2901126
+</td>
+<td style="text-align:right;">
+0.3152580
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+free.sulfur.dioxide
+</td>
+<td style="text-align:right;">
+0.4309140
+</td>
+<td style="text-align:right;">
+0.0719326
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+total.sulfur.dioxide
+</td>
+<td style="text-align:right;">
+0.4874181
+</td>
+<td style="text-align:right;">
+0.0872663
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+density
+</td>
+<td style="text-align:right;">
+-0.0449366
+</td>
+<td style="text-align:right;">
+0.5840373
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pH
+</td>
+<td style="text-align:right;">
+-0.2186864
+</td>
+<td style="text-align:right;">
+-0.1558690
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sulphates
+</td>
+<td style="text-align:right;">
+-0.2941352
+</td>
+<td style="text-align:right;">
+0.1917158
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+alcohol
+</td>
+<td style="text-align:right;">
+-0.1064371
+</td>
+<td style="text-align:right;">
+-0.4650577
+</td>
+</tr>
+</tbody>
+</table>
 
     ## Importance of first k=2 (out of 11) components:
     ##                           PC1    PC2
@@ -78,9 +249,235 @@ between cluster error for quality
     ## Proportion of Variance 0.2754 0.2267
     ## Cumulative Proportion  0.2754 0.5021
 
-## Association Rules
+While we can be quite satisfied with clustering based on color, we can
+increase summaries to improve clustering based on quality. This is also
+evident from the fact that 2 components explain only 50% of the
+variation in the data.
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-8-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-8-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-8-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-8-4.png)
+<table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+features
+</th>
+<th style="text-align:right;">
+PC1
+</th>
+<th style="text-align:right;">
+PC2
+</th>
+<th style="text-align:right;">
+PC3
+</th>
+<th style="text-align:right;">
+PC4
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+fixed.acidity
+</td>
+<td style="text-align:right;">
+-0.2387989
+</td>
+<td style="text-align:right;">
+0.3363545
+</td>
+<td style="text-align:right;">
+-0.4343013
+</td>
+<td style="text-align:right;">
+0.1643462
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+volatile.acidity
+</td>
+<td style="text-align:right;">
+-0.3807575
+</td>
+<td style="text-align:right;">
+0.1175497
+</td>
+<td style="text-align:right;">
+0.3072594
+</td>
+<td style="text-align:right;">
+0.2127849
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+citric.acid
+</td>
+<td style="text-align:right;">
+0.1523884
+</td>
+<td style="text-align:right;">
+0.1832994
+</td>
+<td style="text-align:right;">
+-0.5905697
+</td>
+<td style="text-align:right;">
+-0.2643003
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+residual.sugar
+</td>
+<td style="text-align:right;">
+0.3459199
+</td>
+<td style="text-align:right;">
+0.3299142
+</td>
+<td style="text-align:right;">
+0.1646884
+</td>
+<td style="text-align:right;">
+0.1674430
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+chlorides
+</td>
+<td style="text-align:right;">
+-0.2901126
+</td>
+<td style="text-align:right;">
+0.3152580
+</td>
+<td style="text-align:right;">
+0.0166791
+</td>
+<td style="text-align:right;">
+-0.2447439
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+free.sulfur.dioxide
+</td>
+<td style="text-align:right;">
+0.4309140
+</td>
+<td style="text-align:right;">
+0.0719326
+</td>
+<td style="text-align:right;">
+0.1342239
+</td>
+<td style="text-align:right;">
+-0.3572789
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+total.sulfur.dioxide
+</td>
+<td style="text-align:right;">
+0.4874181
+</td>
+<td style="text-align:right;">
+0.0872663
+</td>
+<td style="text-align:right;">
+0.1074623
+</td>
+<td style="text-align:right;">
+-0.2084201
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+density
+</td>
+<td style="text-align:right;">
+-0.0449366
+</td>
+<td style="text-align:right;">
+0.5840373
+</td>
+<td style="text-align:right;">
+0.1756056
+</td>
+<td style="text-align:right;">
+0.0727250
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pH
+</td>
+<td style="text-align:right;">
+-0.2186864
+</td>
+<td style="text-align:right;">
+-0.1558690
+</td>
+<td style="text-align:right;">
+0.4553241
+</td>
+<td style="text-align:right;">
+-0.4145511
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sulphates
+</td>
+<td style="text-align:right;">
+-0.2941352
+</td>
+<td style="text-align:right;">
+0.1917158
+</td>
+<td style="text-align:right;">
+-0.0700425
+</td>
+<td style="text-align:right;">
+-0.6405357
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+alcohol
+</td>
+<td style="text-align:right;">
+-0.1064371
+</td>
+<td style="text-align:right;">
+-0.4650577
+</td>
+<td style="text-align:right;">
+-0.2611005
+</td>
+<td style="text-align:right;">
+-0.1068027
+</td>
+</tr>
+</tbody>
+</table>
+
+    ## Importance of first k=4 (out of 11) components:
+    ##                           PC1    PC2    PC3     PC4
+    ## Standard deviation     1.7407 1.5792 1.2475 0.98517
+    ## Proportion of Variance 0.2754 0.2267 0.1415 0.08823
+    ## Cumulative Proportion  0.2754 0.5021 0.6436 0.73187
+
+Not the most impressive result but still much better. 4 components are
+able to explain a lot more of the variation but not completely. So if i
+had to use supervised learning models on PCA i would pick the model with
+4 components versus 2 components.
+
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
     ## Apriori
     ## 
@@ -99,10 +496,10 @@ between cluster error for quality
     ## set item appearances ...[0 item(s)] done [0.00s].
     ## set transactions ...[170 item(s), 9835 transaction(s)] done [0.00s].
     ## sorting and recoding items ... [157 item(s)] done [0.00s].
-    ## creating transaction tree ... done [0.01s].
+    ## creating transaction tree ... done [0.00s].
     ## checking subsets of size 1 2 3 4 done [0.01s].
-    ## writing ... [30843 rule(s)] done [0.01s].
-    ## creating S4 object  ... done [0.03s].
+    ## writing ... [30843 rule(s)] done [0.00s].
+    ## creating S4 object  ... done [0.01s].
 
     ##      lhs                    rhs                support     confidence
     ## [1]  {honey}             => {whole milk}       0.001118454 0.7333333 
@@ -207,4 +604,4 @@ between cluster error for quality
     ## [49] 0.003863752 1.5737831 11   
     ## [50] 0.003863752 2.0400614 15
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-2-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-2-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-2-4.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-2-5.png)![](C:/Users/hp/Documents/Data-Mining-PS4/groceryrules1.graphml.gephi)
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-4.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-5.png)![](C:/Users/hp/Documents/Data-Mining-PS4/groceryrules1.graphml.gephi)

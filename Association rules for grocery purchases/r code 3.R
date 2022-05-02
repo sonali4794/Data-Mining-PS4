@@ -38,10 +38,12 @@ plot(groccery_rules)
 plot(groccery_rules, measure = c("support", "lift"), shading = "confidence")
 plot(groccery_rules, method='two-key plot')
 
-sub1 = subset(groccery_rules, subset=confidence > 0.005 & support > 0.005)
+sub1 = subset(groccery_rules, subset=confidence > 0.01 & support > 0.01)
 saveAsGraph(sub1, file = "groceryrules.graphml")
 
 plot(head(sub1, 100, by='lift'), method='graph')
+
+knitr::include_graphics("C:/Users/hp/Documents/Data-Mining-PS4/groceryrules1.graphml.gephi")
 
 
 

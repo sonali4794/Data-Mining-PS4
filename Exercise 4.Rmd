@@ -68,25 +68,41 @@ here::i_am("Data-Mining-PS4/include.R")
 
 ##Clustering and PCA
 
-```{r}
+The idea is to see if there is any visible appearance of clustering based on color of wine and/or quality of wine. We work with 2 and 10 clusters for wine and quality seperation respectively. We perform both kmeans clustering and hierarchial clustering. But dues to presence of too many outliers hierarchial clustering doesnt provide satisfying results. 
+Next we also explore PCA. We start with 2 summaries and that gives us good results for clustering based on color of wine. To get better results for clustering based on quality we try with 4 components that cummulatively explain nearly 74% of the variation in the data but individually dont explain much. 
 
+```{r}
+#read data and remove NAs
 wine = read_csv(here("Data-Mining-PS4/Clustering and PCA/wine.csv"))
 wine = na.omit(wine)
-view(wine)
+
 #centre, scaling and rescaling
 X = wine[, -(12:13)]
 X = scale(X, center=TRUE, scale=TRUE)
 mu = attr(X,"scaled:center")
 sigma = attr(X,"scaled:scale")
 
-#kmeans for wine comparision 
+```
+Lets look at Kmeans and Kmeans++ clustering. 
+
+KMEANS
+Analyse if any clustering occurs with 2 clusters based on wine color
+
+```{r}
+#kmeans for wine comparison 
 kmeans_cluster_wine = kmeans(X, 2, nstart=25)
 
 ggplot(wine) + 
   geom_point(aes(color, density, color=factor(kmeans_cluster_wine$cluster)))+
   xlab("Color of the wine in original data") +
   ylab("Density") +
-  labs(color = "Kmeans clustering")
+  labs(color = "Kmeans clustering") +
+  labs(title = "Kmeans clustering showing seperation based on color of wine")
+```
+
+Analyse if any clustering occurs with 10 clusters based on wine quality
+
+```{r}
 
 #kmeans for quality comparison
 kmeans_cluster_quality = kmeans(X, 10, nstart=25)
@@ -95,7 +111,16 @@ ggplot(wine) +
   geom_point(aes(quality, density, color=factor(kmeans_cluster_quality$cluster)))+
   xlab("Quality of the wine in original data") +
   ylab("Density") +
-  labs(color = "Kmeans clustering")
+  labs(color = "Kmeans clustering")+
+  labs(title = "Kmeans clustering showing seperation based on quality of wine") +
+  scale_color_brewer(palette = "Dark2")
+
+```
+
+KMEANS++
+Analyse if any clustering occurs with 2 clusters based on wine color
+
+```{r}
 
 #kmeans++ for wine comparison
 kmeanspp_cluster_wine = kmeanspp(X, 2, nstart=25)
@@ -104,8 +129,13 @@ ggplot(wine) +
   geom_point(aes(color, density, color=factor(kmeanspp_cluster_wine$cluster)))+
   xlab("Color of the wine in original data") +
   ylab("Density") +
-  labs(color = "Kmeans++ clustering")
+  labs(color = "Kmeans++ clustering") +
+  labs(title = "Kmeans++ clustering showing seperation based on color of wine")
+```
 
+Analyse if any clustering occurs with 10 clusters based on wine quality
+
+```{r}
 #kmeans++ for quality comparison
 kmeanspp_cluster_quality = kmeanspp(X, 10, nstart=25)
 
@@ -113,7 +143,14 @@ ggplot(wine) +
   geom_point(aes(quality, density, color=factor(kmeanspp_cluster_quality$cluster)))+
   xlab("Quality of the wine in original data") +
   ylab("Density") +
-  labs(color = "Kmeans++ clustering")
+  labs(color = "Kmeans++ clustering")+
+  labs(title = "Kmeans++ clustering showing seperation based on quality of wine") +
+  scale_color_brewer(palette = "Dark2")
+```
+Both kmeans and kmeans++ provide good results for clustering for wine color but neither does that well for quality based clustering. 
+If we have to pick one of these two models we will use within and bewtween clusters to check which is better. 
+
+```{r}
 
 #tabular representation
 df = data.frame(
@@ -128,56 +165,91 @@ df = df %>%
   kable_material_dark()
 df
 
-#agglomerative hierarchial clustering
-wine_dist = dist(X)
-#for wine
-h1_wine = hclust(wine_dist, method='average')
-c1_wine = cutree(h1_wine, 2)
-D1_wine = data.frame(wine, z1_wine = c1_wine)
-ggplot(D1_wine) + geom_point(aes(x=color, y=density, col=factor(z1_wine)))
+```
 
-h2_wine = hclust(wine_dist, method='average')
-c2_wine = cutree(h2_wine, 2)
-D2_wine = data.frame(wine, z2_wine = c2_wine)
-ggplot(D2_wine) + geom_point(aes(x=color, y=density, col=factor(z2_wine)))
+Clearly Kmeans++ would be our preference as it has a higher between cluster error and lower within clsuter error indicating more homgeneity and seperated clsuters. 
 
-h3_wine = hclust(wine_dist, method='average')
-c3_wine = cutree(h3_wine, 2)
-D3_wine = data.frame(wine, z3_wine = c3_wine)
-ggplot(D3_wine) + geom_point(aes(x=color, y=density, col=factor(z3_wine)))
+Now we try using PCA analysis
+First we use 2 components and see if any indicative clustering occurs for both color and quality
 
-#for quality 
-h1_quality = hclust(wine_dist, method='average')
-c1_quality = cutree(h1_quality, 10)
-D1_quality = data.frame(wine, z1_quality = c1_quality)
-ggplot(D1_quality) + geom_point(aes(x=color, y=density, col=factor(z1_quality)))
+```{r}
 
+pc2 = prcomp(X, scale=TRUE, rank=2)
+scores2 = pc2$x
 
-h2_quality = hclust(wine_dist, method='average')
-c2_quality = cutree(h2_quality, 10)
-D2_quality = data.frame(wine, z2_quality = c2_quality)
-ggplot(D2_quality) + geom_point(aes(x=color, y=density, col=factor(z2_quality)))
+qplot(scores2[,1], scores2[,2], color=wine$color)+
+  xlab("Principal Component 1") +
+  ylab("Principal Component 2") +
+  labs(color = "Wine Color")+
+  labs(title = "PCA Analysis")
 
+qplot(scores2[,1], scores2[,2], color=wine$quality)+
+  xlab("Principal Component 1") +
+  ylab("Principal Component 2") +
+  labs(color = "Wine Quality")+
+  labs(title = "PCA Analysis") +
+  scale_color_gradientn(colours = rainbow(5))
 
-h3_quality = hclust(wine_dist, method='average')
-c3_quality = cutree(h3_quality, 10)
-D3_quality = data.frame(wine, z3_quality = c3_quality)
-ggplot(D3_quality) + geom_point(aes(x=color, y=density, col=factor(z3_quality)))
+loadings_summary2 = pc2$rotation %>%
+  as.data.frame()%>%
+  rownames_to_column('features')%>%
+  kbl() %>%
+  kable_material_dark()
+loadings_summary2
 
-
-#PCA
-pc1 = prcomp(X, scale=TRUE, rank=2)
-loadings = pc1$rotation
-scores = pc1$x
-
-qplot(scores[,1], scores[,2], color=wine$color, xlab='PCA1', ylab='PCA2')
-
-head(pc1$rotation)
-summary(pc1)
+summary(pc2)
 
 ```
 
-## Association Rules
+While we can be quite satisfied with clustering based on color, we can increase summaries to improve clustering based on quality. This is also evident from the fact that 2 components explain only 50% of the variation in the data. 
+
+```{r}
+
+pc4 = prcomp(X, scale=TRUE, rank=4)
+scores4 = pc4$x
+
+qplot(scores4[,1], scores4[,2], color=wine$quality)+
+  xlab("Principal Component 1") +
+  ylab("Principal Component 2") +
+  labs(color = "Wine Quality")+
+  labs(title = "PCA Analysis") +
+  scale_color_gradientn(colours = rainbow(5))
+
+qplot(scores4[,2], scores4[,3], color=wine$quality)+
+  xlab("Principal Component 2") +
+  ylab("Principal Component 3") +
+  labs(color = "Wine Quality")+
+  labs(title = "PCA Analysis") +
+  scale_color_gradientn(colours = rainbow(5))
+
+qplot(scores4[,3], scores4[,4], color=wine$quality)+
+  xlab("Principal Component 3") +
+  ylab("Principal Component 4") +
+  labs(color = "Wine Quality")+
+  labs(title = "PCA Analysis") +
+  scale_color_gradientn(colours = rainbow(5))
+
+qplot(scores4[,1], scores4[,4], color=wine$quality)+
+  xlab("Principal Component 1") +
+  ylab("Principal Component 4") +
+  labs(color = "Wine Quality")+
+  labs(title = "PCA Analysis") +
+  scale_color_gradientn(colours = rainbow(5))
+
+loadings_summary4 = pc4$rotation %>%
+  as.data.frame()%>%
+  rownames_to_column('features')%>%
+  kbl() %>%
+  kable_material_dark()
+loadings_summary4
+
+summary(pc4)
+
+```
+
+Not the most impressive result but still much better. 
+4 components are able to explain a lot more of the variation but not completely. So if i had to use supervised learning models on PCA i would pick the model with 4 components versus 2 components. 
+
 ```{r}
 
 grocery_txt = read.delim(here("Data-Mining-PS4/Association rules for grocery purchases/groceries.txt"))

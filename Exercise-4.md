@@ -3,18 +3,19 @@
 The idea is to see if there is any visible appearance of clustering
 based on color of wine and/or quality of wine. We work with 2 and 10
 clusters for wine and quality seperation respectively. We perform both
-kmeans clustering and hierarchial clustering. But dues to presence of
-too many outliers hierarchial clustering doesnt provide satisfying
-results. Next we also explore PCA. We start with 2 summaries and that
-gives us good results for clustering based on color of wine. To get
-better results for clustering based on quality we try with 4 components
-that cummulatively explain nearly 74% of the variation in the data but
+kmeans clustering and hierarchial clustering. But due to presence of too
+many outliers hierarchial clustering doesnt provide satisfying results.
+Next we also explore PCA. We start with 2 summaries and that gives us
+good results for clustering based on color of wine. To get better
+results for clustering based on quality we try with 4 components that
+cummulatively explain nearly 74% of the variation in the data but
 individually dont explain much.
 
 Lets look at Kmeans and Kmeans++ clustering.
 
-KMEANS Analyse if any clustering occurs with 2 clusters based on wine
-color
+KMEANS
+
+Analyse if any clustering occurs with 2 clusters based on wine color
 
 ![](Exercise-4_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
@@ -22,8 +23,9 @@ Analyse if any clustering occurs with 10 clusters based on wine quality
 
 ![](Exercise-4_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
-KMEANS++ Analyse if any clustering occurs with 2 clusters based on wine
-color
+KMEANS++
+
+Analyse if any clustering occurs with 2 clusters based on wine color
 
 ![](Exercise-4_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
@@ -32,8 +34,8 @@ Analyse if any clustering occurs with 10 clusters based on wine quality
 ![](Exercise-4_files/figure-markdown_github/unnamed-chunk-5-1.png) Both
 kmeans and kmeans++ provide good results for clustering for wine color
 but neither does that well for quality based clustering. If we have to
-pick one of these two models we will use within and bewtween clusters to
-check which is better.
+pick one of these two models we will use within and between clusters
+errors to check which is better.
 
 <table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
@@ -97,8 +99,8 @@ between cluster error for quality
 </table>
 
 Clearly Kmeans++ would be our preference as it has a higher between
-cluster error and lower within clsuter error indicating more homgeneity
-and seperated clsuters.
+cluster error and lower within cluster error indicating more homogeneity
+and separated clusters.
 
 Now we try using PCA analysis First we use 2 components and see if any
 indicative clustering occurs for both color and quality
@@ -486,17 +488,21 @@ correlation between these segments (my guess is that we will) then it
 may make sense to perform PCA and reduce the segments from 36 to
 whatever seems suitable.
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-1.png) I do
-require a optimal number of clusters and I think computing from the
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-1.png)
+
+I do require a optimal number of clusters and I think computing from the
 elbow plot might be a good starting point for the same.
 
 ![](Exercise-4_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
 From this plot I would start with 15 clusters.
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-11-1.png) This
-is just to get a pictorial view of 15 clustering of the data. I have
-taken two highly correlated market segments.
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-11-1.png)
+
+This is just to get a pictorial view of 15 clustering of the data. I
+have taken two highly correlated market segments. The purpose of this
+graph is just to visually gauge if any presence in clustering is deteced
+through kmeans++. We will still use PCA for rest of the analysis.
 
 Next we do PCA on this
 

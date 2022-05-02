@@ -181,13 +181,13 @@ qplot(scores2[,1], scores2[,2], color=wine$color)+
   xlab("Principal Component 1") +
   ylab("Principal Component 2") +
   labs(color = "Wine Color")+
-  labs(title = "PCA Analysis")
+  labs(title = "PCA Analysis for 2 components between PCA1 and PCA2 based on wine")
 
 qplot(scores2[,1], scores2[,2], color=wine$quality)+
   xlab("Principal Component 1") +
   ylab("Principal Component 2") +
   labs(color = "Wine Quality")+
-  labs(title = "PCA Analysis") +
+  labs(title = "PCA Analysis for 2 components between PCA1 and PCA2 based on quality") +
   scale_color_gradientn(colours = rainbow(5))
 
 loadings_summary2 = pc2$rotation %>%
@@ -212,28 +212,28 @@ qplot(scores4[,1], scores4[,2], color=wine$quality)+
   xlab("Principal Component 1") +
   ylab("Principal Component 2") +
   labs(color = "Wine Quality")+
-  labs(title = "PCA Analysis") +
+  labs(title = "PCA Analysis for 4 components between PCA1 and PCA2 for quality") +
   scale_color_gradientn(colours = rainbow(5))
 
 qplot(scores4[,2], scores4[,3], color=wine$quality)+
   xlab("Principal Component 2") +
   ylab("Principal Component 3") +
   labs(color = "Wine Quality")+
-  labs(title = "PCA Analysis") +
+  labs(title = "PCA Analysis for 4 components between PCA2 and PCA3 for quality") +
   scale_color_gradientn(colours = rainbow(5))
 
 qplot(scores4[,3], scores4[,4], color=wine$quality)+
   xlab("Principal Component 3") +
   ylab("Principal Component 4") +
   labs(color = "Wine Quality")+
-  labs(title = "PCA Analysis") +
+  labs(title = "PCA Analysis for 4 components between PCA3 and PCA4 for quality") +
   scale_color_gradientn(colours = rainbow(5))
 
 qplot(scores4[,1], scores4[,4], color=wine$quality)+
   xlab("Principal Component 1") +
   ylab("Principal Component 4") +
   labs(color = "Wine Quality")+
-  labs(title = "PCA Analysis") +
+  labs(title = "PCA Analysis for 4 components between PCA1 and PCA4 for quality") +
   scale_color_gradientn(colours = rainbow(5))
 
 loadings_summary4 = pc4$rotation %>%

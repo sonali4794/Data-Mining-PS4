@@ -500,7 +500,7 @@ taken two highly correlated market segments.
 
 Next we do PCA on this
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-1.png)
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-4.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-5.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-6.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-7.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-8.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-9.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-10.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-11.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-12.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-13.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-14.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-12-15.png)
 <table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>

@@ -415,3 +415,4 @@ knitr::include_graphics("C:/Users/hp/Documents/Data-Mining-PS4/screenshot2.png")
 
 ```
 
+![Gephi graph to the association rules for confidence and support over 0.01](C:/Users/hp/Documents/Data-Mining-PS4/screenshot1.png)

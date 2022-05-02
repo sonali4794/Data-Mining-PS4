@@ -495,7 +495,7 @@ elbow plot might be a good starting point for the same.
 From this plot I would start with 15 clusters.
 
 ![](Exercise-4_files/figure-markdown_github/unnamed-chunk-11-1.png) This
-is just to get a pictorial view of 10 clustering of the data. I have
+is just to get a pictorial view of 15 clustering of the data. I have
 taken two highly correlated market segments.
 
 Next we do PCA on this

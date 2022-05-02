@@ -294,7 +294,7 @@ ggplot(social_marketing) +
   labs(color = "Kmeans++ clustering")
 
 ```
-This is just to get a pictorial view of 10 clustering of the data. I have taken two highly correlated market segments. 
+This is just to get a pictorial view of 15 clustering of the data. I have taken two highly correlated market segments. 
 
 Next we do PCA on this
 

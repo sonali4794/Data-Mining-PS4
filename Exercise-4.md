@@ -2392,7 +2392,16 @@ entertainment segments similar to PC2.
 If we were to run supervised learning models, we would benefit from
 using these 15 components instead of all 36 (reduced by more than half)
 while losing roghly 25% of the data.
+
+##Association Rules
+
+Here we look at multiple ways in which shopping baskets of consumers can
+be connected and analyse through lift parameter.
+
 ![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-1.png)
+
+This gives a view of most popular items in shopping baskets for grocery
+shopping
 
     ## Apriori
     ## 
@@ -2412,111 +2421,508 @@ while losing roghly 25% of the data.
     ## set transactions ...[170 item(s), 9835 transaction(s)] done [0.00s].
     ## sorting and recoding items ... [157 item(s)] done [0.00s].
     ## creating transaction tree ... done [0.00s].
-    ## checking subsets of size 1 2 3 4 done [0.02s].
-    ## writing ... [30843 rule(s)] done [0.01s].
-    ## creating S4 object  ... done [0.02s].
+    ## checking subsets of size 1 2 3 4 done [0.01s].
+    ## writing ... [30843 rule(s)] done [0.00s].
+    ## creating S4 object  ... done [0.01s].
 
-    ##      lhs                    rhs                support     confidence
-    ## [1]  {honey}             => {whole milk}       0.001118454 0.7333333 
-    ## [2]  {soap}              => {whole milk}       0.001118454 0.4230769 
-    ## [3]  {tidbits}           => {soda}             0.001016777 0.4347826 
-    ## [4]  {tidbits}           => {rolls/buns}       0.001220132 0.5217391 
-    ## [5]  {cocoa drinks}      => {whole milk}       0.001321810 0.5909091 
-    ## [6]  {snack products}    => {soda}             0.001118454 0.3666667 
-    ## [7]  {snack products}    => {rolls/buns}       0.001118454 0.3666667 
-    ## [8]  {pudding powder}    => {whole milk}       0.001321810 0.5652174 
-    ## [9]  {cooking chocolate} => {whole milk}       0.001321810 0.5200000 
-    ## [10] {bathroom cleaner}  => {soda}             0.001016777 0.3703704 
-    ## [11] {bathroom cleaner}  => {other vegetables} 0.001016777 0.3703704 
-    ## [12] {nuts/prunes}       => {rolls/buns}       0.001016777 0.3030303 
-    ## [13] {nuts/prunes}       => {whole milk}       0.001220132 0.3636364 
-    ## [14] {brandy}            => {shopping bags}    0.001321810 0.3170732 
-    ## [15] {brandy}            => {rolls/buns}       0.001118454 0.2682927 
-    ## [16] {nut snack}         => {soda}             0.001016777 0.3225806 
-    ## [17] {potato products}   => {pastry}           0.001016777 0.3571429 
-    ## [18] {potato products}   => {whole milk}       0.001220132 0.4285714 
-    ## [19] {artif. sweetener}  => {yogurt}           0.001118454 0.3437500 
-    ## [20] {artif. sweetener}  => {other vegetables} 0.001016777 0.3125000 
-    ## [21] {artif. sweetener}  => {whole milk}       0.001118454 0.3437500 
-    ## [22] {male cosmetics}    => {bottled water}    0.001321810 0.2888889 
-    ## [23] {male cosmetics}    => {yogurt}           0.001016777 0.2222222 
-    ## [24] {light bulbs}       => {yogurt}           0.001220132 0.2926829 
-    ## [25] {light bulbs}       => {other vegetables} 0.001321810 0.3170732 
-    ## [26] {syrup}             => {other vegetables} 0.001118454 0.3437500 
-    ## [27] {canned fruit}      => {citrus fruit}     0.001118454 0.3437500 
-    ## [28] {canned fruit}      => {other vegetables} 0.001118454 0.3437500 
-    ## [29] {canned fruit}      => {whole milk}       0.001321810 0.4062500 
-    ## [30] {rum}               => {other vegetables} 0.001525165 0.3409091 
-    ## [31] {rum}               => {whole milk}       0.001728521 0.3863636 
-    ## [32] {meat spreads}      => {cream cheese}     0.001118454 0.2619048 
-    ## [33] {meat spreads}      => {soda}             0.001423488 0.3333333 
-    ## [34] {meat spreads}      => {yogurt}           0.001830198 0.4285714 
-    ## [35] {meat spreads}      => {rolls/buns}       0.001321810 0.3095238 
-    ## [36] {meat spreads}      => {whole milk}       0.001321810 0.3095238 
-    ## [37] {skin care}         => {yogurt}           0.001016777 0.2857143 
-    ## [38] {skin care}         => {rolls/buns}       0.001423488 0.4000000 
-    ## [39] {skin care}         => {other vegetables} 0.001220132 0.3428571 
-    ## [40] {skin care}         => {whole milk}       0.001626843 0.4571429 
-    ## [41] {specialty fat}     => {margarine}        0.001220132 0.3333333 
-    ## [42] {specialty fat}     => {other vegetables} 0.001118454 0.3055556 
-    ## [43] {specialty fat}     => {whole milk}       0.001220132 0.3333333 
-    ## [44] {sparkling wine}    => {root vegetables}  0.001016777 0.1818182 
-    ## [45] {sparkling wine}    => {other vegetables} 0.001525165 0.2727273 
-    ## [46] {sparkling wine}    => {whole milk}       0.001016777 0.1818182 
-    ## [47] {tea}               => {bottled beer}     0.001118454 0.2894737 
-    ## [48] {tea}               => {tropical fruit}   0.001321810 0.3421053 
-    ## [49] {tea}               => {rolls/buns}       0.001118454 0.2894737 
-    ## [50] {tea}               => {other vegetables} 0.001525165 0.3947368 
-    ##      coverage    lift      count
-    ## [1]  0.001525165 2.8700093 11   
-    ## [2]  0.002643620 1.6557746 11   
-    ## [3]  0.002338587 2.4933452 10   
-    ## [4]  0.002338587 2.8365419 12   
-    ## [5]  0.002236909 2.3126108 13   
-    ## [6]  0.003050330 2.1027211 11   
-    ## [7]  0.003050330 1.9934586 11   
-    ## [8]  0.002338587 2.2120625 13   
-    ## [9]  0.002541942 2.0350975 13   
-    ## [10] 0.002745297 2.1239607 10   
-    ## [11] 0.002745297 1.9141317 10   
-    ## [12] 0.003355363 1.6474865 10   
-    ## [13] 0.003355363 1.4231451 12   
-    ## [14] 0.004168785 3.2181782 13   
-    ## [15] 0.004168785 1.4586283 11   
-    ## [16] 0.003152008 1.8499013 10   
-    ## [17] 0.002846975 4.0142857 10   
-    ## [18] 0.002846975 1.6772782 12   
-    ## [19] 0.003253686 2.4641263 11   
-    ## [20] 0.003253686 1.6150486 10   
-    ## [21] 0.003253686 1.3453169 11   
-    ## [22] 0.004575496 2.6138199 13   
-    ## [23] 0.004575496 1.5929705 10   
-    ## [24] 0.004168785 2.0980587 12   
-    ## [25] 0.004168785 1.6386835 13   
-    ## [26] 0.003253686 1.7765535 11   
-    ## [27] 0.003253686 4.1584025 11   
-    ## [28] 0.003253686 1.7765535 11   
-    ## [29] 0.003253686 1.5899199 13   
-    ## [30] 0.004473818 1.7618712 15   
-    ## [31] 0.004473818 1.5120917 17   
-    ## [32] 0.004270463 6.6047009 11   
-    ## [33] 0.004270463 1.9115646 14   
-    ## [34] 0.004270463 3.0721574 18   
-    ## [35] 0.004270463 1.6827898 13   
-    ## [36] 0.004270463 1.2113676 13   
-    ## [37] 0.003558719 2.0481050 10   
-    ## [38] 0.003558719 2.1746821 14   
-    ## [39] 0.003558719 1.7719390 12   
-    ## [40] 0.003558719 1.7890967 16   
-    ## [41] 0.003660397 5.7014493 12   
-    ## [42] 0.003660397 1.5791586 11   
-    ## [43] 0.003660397 1.3045497 12   
-    ## [44] 0.005592272 1.6680801 10   
-    ## [45] 0.005592272 1.4094970 15   
-    ## [46] 0.005592272 0.7115726 10   
-    ## [47] 0.003863752 3.5946637 11   
-    ## [48] 0.003863752 3.2602764 13   
-    ## [49] 0.003863752 1.5737831 11   
-    ## [50] 0.003863752 2.0400614 15
+![](Exercise-4_files/figure-markdown_github/unnamed-chunk-14-1.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-14-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-14-3.png)
 
-![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-2.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-3.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-4.png)![](Exercise-4_files/figure-markdown_github/unnamed-chunk-13-5.png)![](C:/Users/hp/Documents/Data-Mining-PS4/groceryrules1.graphml.gephi)
+As expected higher confidence leads to lower lift. There is a clear
+inverse relation between the two. We have chosen support threshold of
+0.001 and confidence threshold of 0.1 with highest transaction level at
+4 and lowest at 1. Basically I have removed the entries where it reports
+a transaction with itself for purpose of this exercise.
+
+<table class=" lightable-material-dark" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+LHS
+</th>
+<th style="text-align:left;">
+RHS
+</th>
+<th style="text-align:right;">
+support
+</th>
+<th style="text-align:right;">
+confidence
+</th>
+<th style="text-align:right;">
+coverage
+</th>
+<th style="text-align:right;">
+lift
+</th>
+<th style="text-align:right;">
+count
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+{bottled beer,red/blush wine}
+</td>
+<td style="text-align:left;">
+{liquor}
+</td>
+<td style="text-align:right;">
+0.0019319
+</td>
+<td style="text-align:right;">
+0.3958333
+</td>
+<td style="text-align:right;">
+0.0048805
+</td>
+<td style="text-align:right;">
+35.71579
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{hamburger meat,soda}
+</td>
+<td style="text-align:left;">
+{Instant food products}
+</td>
+<td style="text-align:right;">
+0.0012201
+</td>
+<td style="text-align:right;">
+0.2105263
+</td>
+<td style="text-align:right;">
+0.0057956
+</td>
+<td style="text-align:right;">
+26.20919
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{ham,white bread}
+</td>
+<td style="text-align:left;">
+{processed cheese}
+</td>
+<td style="text-align:right;">
+0.0019319
+</td>
+<td style="text-align:right;">
+0.3800000
+</td>
+<td style="text-align:right;">
+0.0050839
+</td>
+<td style="text-align:right;">
+22.92822
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{bottled beer,liquor}
+</td>
+<td style="text-align:left;">
+{red/blush wine}
+</td>
+<td style="text-align:right;">
+0.0019319
+</td>
+<td style="text-align:right;">
+0.4130435
+</td>
+<td style="text-align:right;">
+0.0046772
+</td>
+<td style="text-align:right;">
+21.49356
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{Instant food products,soda}
+</td>
+<td style="text-align:left;">
+{hamburger meat}
+</td>
+<td style="text-align:right;">
+0.0012201
+</td>
+<td style="text-align:right;">
+0.6315789
+</td>
+<td style="text-align:right;">
+0.0019319
+</td>
+<td style="text-align:right;">
+18.99565
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{curd,sugar}
+</td>
+<td style="text-align:left;">
+{flour}
+</td>
+<td style="text-align:right;">
+0.0011185
+</td>
+<td style="text-align:right;">
+0.3235294
+</td>
+<td style="text-align:right;">
+0.0034570
+</td>
+<td style="text-align:right;">
+18.60767
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{salty snack,soda}
+</td>
+<td style="text-align:left;">
+{popcorn}
+</td>
+<td style="text-align:right;">
+0.0012201
+</td>
+<td style="text-align:right;">
+0.1304348
+</td>
+<td style="text-align:right;">
+0.0093543
+</td>
+<td style="text-align:right;">
+18.06797
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{baking powder,sugar}
+</td>
+<td style="text-align:left;">
+{flour}
+</td>
+<td style="text-align:right;">
+0.0010168
+</td>
+<td style="text-align:right;">
+0.3125000
+</td>
+<td style="text-align:right;">
+0.0032537
+</td>
+<td style="text-align:right;">
+17.97332
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{processed cheese,white bread}
+</td>
+<td style="text-align:left;">
+{ham}
+</td>
+<td style="text-align:right;">
+0.0019319
+</td>
+<td style="text-align:right;">
+0.4634146
+</td>
+<td style="text-align:right;">
+0.0041688
+</td>
+<td style="text-align:right;">
+17.80345
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{fruit/vegetable juice,ham}
+</td>
+<td style="text-align:left;">
+{processed cheese}
+</td>
+<td style="text-align:right;">
+0.0011185
+</td>
+<td style="text-align:right;">
+0.2894737
+</td>
+<td style="text-align:right;">
+0.0038638
+</td>
+<td style="text-align:right;">
+17.46610
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{margarine,sugar}
+</td>
+<td style="text-align:left;">
+{flour}
+</td>
+<td style="text-align:right;">
+0.0016268
+</td>
+<td style="text-align:right;">
+0.2962963
+</td>
+<td style="text-align:right;">
+0.0054906
+</td>
+<td style="text-align:right;">
+17.04137
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{root vegetables,sugar,whole milk}
+</td>
+<td style="text-align:left;">
+{flour}
+</td>
+<td style="text-align:right;">
+0.0010168
+</td>
+<td style="text-align:right;">
+0.2941176
+</td>
+<td style="text-align:right;">
+0.0034570
+</td>
+<td style="text-align:right;">
+16.91606
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{popcorn,soda}
+</td>
+<td style="text-align:left;">
+{salty snack}
+</td>
+<td style="text-align:right;">
+0.0012201
+</td>
+<td style="text-align:right;">
+0.6315789
+</td>
+<td style="text-align:right;">
+0.0019319
+</td>
+<td style="text-align:right;">
+16.69779
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{baking powder,flour}
+</td>
+<td style="text-align:left;">
+{sugar}
+</td>
+<td style="text-align:right;">
+0.0010168
+</td>
+<td style="text-align:right;">
+0.5555556
+</td>
+<td style="text-align:right;">
+0.0018302
+</td>
+<td style="text-align:right;">
+16.40807
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{butter,root vegetables,whole milk}
+</td>
+<td style="text-align:left;">
+{rice}
+</td>
+<td style="text-align:right;">
+0.0010168
+</td>
+<td style="text-align:right;">
+0.1234568
+</td>
+<td style="text-align:right;">
+0.0082359
+</td>
+<td style="text-align:right;">
+16.18930
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{sugar,whipped/sour cream}
+</td>
+<td style="text-align:left;">
+{baking powder}
+</td>
+<td style="text-align:right;">
+0.0013218
+</td>
+<td style="text-align:right;">
+0.2708333
+</td>
+<td style="text-align:right;">
+0.0048805
+</td>
+<td style="text-align:right;">
+15.30831
+</td>
+<td style="text-align:right;">
+13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{soda,white bread,whole milk}
+</td>
+<td style="text-align:left;">
+{processed cheese}
+</td>
+<td style="text-align:right;">
+0.0010168
+</td>
+<td style="text-align:right;">
+0.2500000
+</td>
+<td style="text-align:right;">
+0.0040671
+</td>
+<td style="text-align:right;">
+15.08436
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{ham,processed cheese}
+</td>
+<td style="text-align:left;">
+{white bread}
+</td>
+<td style="text-align:right;">
+0.0019319
+</td>
+<td style="text-align:right;">
+0.6333333
+</td>
+<td style="text-align:right;">
+0.0030503
+</td>
+<td style="text-align:right;">
+15.04549
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{Instant food products,whole milk}
+</td>
+<td style="text-align:left;">
+{hamburger meat}
+</td>
+<td style="text-align:right;">
+0.0015252
+</td>
+<td style="text-align:right;">
+0.5000000
+</td>
+<td style="text-align:right;">
+0.0030503
+</td>
+<td style="text-align:right;">
+15.03823
+</td>
+<td style="text-align:right;">
+15
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+{hamburger meat,rolls/buns}
+</td>
+<td style="text-align:left;">
+{Instant food products}
+</td>
+<td style="text-align:right;">
+0.0010168
+</td>
+<td style="text-align:right;">
+0.1176471
+</td>
+<td style="text-align:right;">
+0.0086426
+</td>
+<td style="text-align:right;">
+14.64631
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+</tbody>
+</table>
+
+This is a quite insightful table
+
+<img src="C:/Users/hp/Documents/Data-Mining-PS4/screenshot1.png" width="1024" /><img src="C:/Users/hp/Documents/Data-Mining-PS4/screenshot2.png" width="371" />

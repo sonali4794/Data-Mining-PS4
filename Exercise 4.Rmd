@@ -250,6 +250,10 @@ summary(pc4)
 Not the most impressive result but still much better. 
 4 components are able to explain a lot more of the variation but not completely. So if i had to use supervised learning models on PCA i would pick the model with 4 components versus 2 components. 
 
+##Market Segmentation
+
+
+
 ```{r}
 
 grocery_txt = read.delim(here("Data-Mining-PS4/Association rules for grocery purchases/groceries.txt"))

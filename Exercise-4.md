@@ -477,6 +477,8 @@ able to explain a lot more of the variation but not completely. So if i
 had to use supervised learning models on PCA i would pick the model with
 4 components versus 2 components.
 
+##Market Segmentation
+
 ![](Exercise-4_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
     ## Apriori

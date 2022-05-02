@@ -124,6 +124,7 @@ loadings_summary2 = pc2$rotation %>%
   kable_material_dark()
 loadings_summary2
 
+summary(pc2)
 
 #
 pc4 = prcomp(X, scale=TRUE, rank=4)
